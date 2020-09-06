@@ -441,7 +441,7 @@ int main()
 				strcpy(experiData.szInfo2, "                ");
 				Experiment_SetLedUpdate(&experiData, 0, 0, 0, 0);
 				Experiment_SetLedUpdate(&experiData, 1, 0, 0, 0);
-				Experiment_SetLedUpdate(&experiData, 2, 0, 200, 0);
+				Experiment_SetLedUpdate(&experiData, 2, 0, 0, 200);
 				Experiment_SetLedUpdate(&experiData, 3, 0, 0, 0);
 				break;
 			case DISP_ONLY_HUMID:
