@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Sat Sep  5 21:57:16 2020
+// Date        : Sun Sep  6 12:34:13 2020
 // Host        : l4study running 64-bit Ubuntu 18.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/timothystotts/Workareas/GitHub/timothystotts/fpga-iic-hygro-tester-1/HYGRO-Tester-Design-AXI/IPI-BDs/system_100/ip/system_100_PmodHYGRO_0_0/system_100_PmodHYGRO_0_0_sim_netlist.v
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "system_100_PmodHYGRO_0_0,PmodHYGRO,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "PmodHYGRO,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "system_100_PmodHYGRO_0_0,PmodHYGRO,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "PmodHYGRO,Vivado 2019.1" *) 
 (* NotValidForBitStream *)
 module system_100_PmodHYGRO_0_0
    (AXI_LITE_IIC_araddr,
@@ -76,67 +76,67 @@ module system_100_PmodHYGRO_0_0
     Pmod_out_pin9_t,
     s_axi_aclk,
     s_axi_aresetn);
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC ARADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME AXI_LITE_IIC, PROTOCOL AXI4LITE, ADDR_WIDTH 12, ID_WIDTH 0, DATA_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, READ_WRITE_MODE READ_WRITE, FREQ_HZ 83333333, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]AXI_LITE_IIC_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC ARREADY" *) output AXI_LITE_IIC_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC ARVALID" *) input AXI_LITE_IIC_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC AWADDR" *) input [8:0]AXI_LITE_IIC_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC AWREADY" *) output AXI_LITE_IIC_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC AWVALID" *) input AXI_LITE_IIC_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC BREADY" *) input AXI_LITE_IIC_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC BRESP" *) output [1:0]AXI_LITE_IIC_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC BVALID" *) output AXI_LITE_IIC_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RDATA" *) output [31:0]AXI_LITE_IIC_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RREADY" *) input AXI_LITE_IIC_rready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RRESP" *) output [1:0]AXI_LITE_IIC_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RVALID" *) output AXI_LITE_IIC_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WDATA" *) input [31:0]AXI_LITE_IIC_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WREADY" *) output AXI_LITE_IIC_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WSTRB" *) input [3:0]AXI_LITE_IIC_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WVALID" *) input AXI_LITE_IIC_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR ARADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME AXI_LITE_TMR, DATA_WIDTH 32, PROTOCOL AXI4LITE, ID_WIDTH 0, ADDR_WIDTH 12, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, BUSER_WIDTH 0, RUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, FREQ_HZ 83333333, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]AXI_LITE_TMR_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR ARREADY" *) output AXI_LITE_TMR_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR ARVALID" *) input AXI_LITE_TMR_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR AWADDR" *) input [8:0]AXI_LITE_TMR_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR AWREADY" *) output AXI_LITE_TMR_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR AWVALID" *) input AXI_LITE_TMR_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR BREADY" *) input AXI_LITE_TMR_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR BRESP" *) output [1:0]AXI_LITE_TMR_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR BVALID" *) output AXI_LITE_TMR_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RDATA" *) output [31:0]AXI_LITE_TMR_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RREADY" *) input AXI_LITE_TMR_rready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RRESP" *) output [1:0]AXI_LITE_TMR_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RVALID" *) output AXI_LITE_TMR_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WDATA" *) input [31:0]AXI_LITE_TMR_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WREADY" *) output AXI_LITE_TMR_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WSTRB" *) input [3:0]AXI_LITE_TMR_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WVALID" *) input AXI_LITE_TMR_wvalid;
-  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 INTR.I2C_INTERRUPT INTERRUPT, xilinx.com:signal:interrupt:1.0 I2C_Interrupt INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTR.I2C_INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1, XIL_INTERFACENAME I2C_Interrupt, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output I2C_Interrupt;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_I" *) (* x_interface_parameter = "XIL_INTERFACENAME Pmod_out, BUSIF.BOARD_INTERFACE Custom, BOARD.ASSOCIATED_PARAM PMOD" *) input Pmod_out_pin10_i;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_O" *) output Pmod_out_pin10_o;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_T" *) output Pmod_out_pin10_t;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_I" *) input Pmod_out_pin1_i;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_O" *) output Pmod_out_pin1_o;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_T" *) output Pmod_out_pin1_t;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_I" *) input Pmod_out_pin2_i;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_O" *) output Pmod_out_pin2_o;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_T" *) output Pmod_out_pin2_t;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_I" *) input Pmod_out_pin3_i;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_O" *) output Pmod_out_pin3_o;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_T" *) output Pmod_out_pin3_t;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_I" *) input Pmod_out_pin4_i;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_O" *) output Pmod_out_pin4_o;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_T" *) output Pmod_out_pin4_t;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_I" *) input Pmod_out_pin7_i;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_O" *) output Pmod_out_pin7_o;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_T" *) output Pmod_out_pin7_t;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_I" *) input Pmod_out_pin8_i;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_O" *) output Pmod_out_pin8_o;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_T" *) output Pmod_out_pin8_t;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_I" *) input Pmod_out_pin9_i;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_O" *) output Pmod_out_pin9_o;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_T" *) output Pmod_out_pin9_t;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF AXI_LITE_TMR:AXI_LITE_IIC, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 83333333, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, INSERT_VIP 0" *) input s_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC ARADDR" *) input [8:0]AXI_LITE_IIC_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC ARREADY" *) output AXI_LITE_IIC_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC ARVALID" *) input AXI_LITE_IIC_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC AWADDR" *) input [8:0]AXI_LITE_IIC_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC AWREADY" *) output AXI_LITE_IIC_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC AWVALID" *) input AXI_LITE_IIC_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC BREADY" *) input AXI_LITE_IIC_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC BRESP" *) output [1:0]AXI_LITE_IIC_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC BVALID" *) output AXI_LITE_IIC_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RDATA" *) output [31:0]AXI_LITE_IIC_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RREADY" *) input AXI_LITE_IIC_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RRESP" *) output [1:0]AXI_LITE_IIC_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RVALID" *) output AXI_LITE_IIC_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WDATA" *) input [31:0]AXI_LITE_IIC_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WREADY" *) output AXI_LITE_IIC_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WSTRB" *) input [3:0]AXI_LITE_IIC_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AXI_LITE_IIC, PROTOCOL AXI4LITE, ADDR_WIDTH 12, ID_WIDTH 0, DATA_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, READ_WRITE_MODE READ_WRITE, FREQ_HZ 83333333, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input AXI_LITE_IIC_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR ARADDR" *) input [8:0]AXI_LITE_TMR_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR ARREADY" *) output AXI_LITE_TMR_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR ARVALID" *) input AXI_LITE_TMR_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR AWADDR" *) input [8:0]AXI_LITE_TMR_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR AWREADY" *) output AXI_LITE_TMR_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR AWVALID" *) input AXI_LITE_TMR_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR BREADY" *) input AXI_LITE_TMR_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR BRESP" *) output [1:0]AXI_LITE_TMR_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR BVALID" *) output AXI_LITE_TMR_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RDATA" *) output [31:0]AXI_LITE_TMR_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RREADY" *) input AXI_LITE_TMR_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RRESP" *) output [1:0]AXI_LITE_TMR_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RVALID" *) output AXI_LITE_TMR_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WDATA" *) input [31:0]AXI_LITE_TMR_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WREADY" *) output AXI_LITE_TMR_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WSTRB" *) input [3:0]AXI_LITE_TMR_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AXI_LITE_TMR, DATA_WIDTH 32, PROTOCOL AXI4LITE, ID_WIDTH 0, ADDR_WIDTH 12, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, BUSER_WIDTH 0, RUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, FREQ_HZ 83333333, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input AXI_LITE_TMR_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.I2C_INTERRUPT INTERRUPT, xilinx.com:signal:interrupt:1.0 I2C_Interrupt INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.I2C_INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1, XIL_INTERFACENAME I2C_Interrupt, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output I2C_Interrupt;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_I" *) input Pmod_out_pin10_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_O" *) output Pmod_out_pin10_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_T" *) output Pmod_out_pin10_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_I" *) input Pmod_out_pin1_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_O" *) output Pmod_out_pin1_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_T" *) output Pmod_out_pin1_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_I" *) input Pmod_out_pin2_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_O" *) output Pmod_out_pin2_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_T" *) output Pmod_out_pin2_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_I" *) input Pmod_out_pin3_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_O" *) output Pmod_out_pin3_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_T" *) output Pmod_out_pin3_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_I" *) input Pmod_out_pin4_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_O" *) output Pmod_out_pin4_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_T" *) output Pmod_out_pin4_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_I" *) input Pmod_out_pin7_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_O" *) output Pmod_out_pin7_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_T" *) output Pmod_out_pin7_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_I" *) input Pmod_out_pin8_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_O" *) output Pmod_out_pin8_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_T" *) output Pmod_out_pin8_t;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_I" *) input Pmod_out_pin9_i;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_O" *) output Pmod_out_pin9_o;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_T" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME Pmod_out, BUSIF.BOARD_INTERFACE Custom, BOARD.ASSOCIATED_PARAM PMOD" *) output Pmod_out_pin9_t;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF AXI_LITE_TMR:AXI_LITE_IIC, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 83333333, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, INSERT_VIP 0" *) input s_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
 
   wire [8:0]AXI_LITE_IIC_araddr;
   wire AXI_LITE_IIC_arready;
@@ -200,7 +200,7 @@ module system_100_PmodHYGRO_0_0
   wire s_axi_aclk;
   wire s_axi_aresetn;
 
-  system_100_PmodHYGRO_0_0_PmodHYGRO U0
+  system_100_PmodHYGRO_0_0_PmodHYGRO inst
        (.AXI_LITE_IIC_araddr(AXI_LITE_IIC_araddr),
         .AXI_LITE_IIC_arready(AXI_LITE_IIC_arready),
         .AXI_LITE_IIC_arvalid(AXI_LITE_IIC_arvalid),
@@ -569,8 +569,8 @@ module system_100_PmodHYGRO_0_0_PmodHYGRO
        (.dout(xlconstant_0_dout));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "PmodHYGRO_axi_iic_0_0,axi_iic,{}" *) (* ORIG_REF_NAME = "PmodHYGRO_axi_iic_0_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "axi_iic,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "PmodHYGRO_axi_iic_0_0,axi_iic,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "PmodHYGRO_axi_iic_0_0" *) 
+(* X_CORE_INFO = "axi_iic,Vivado 2019.1" *) 
 module system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0
    (s_axi_aclk,
     s_axi_aresetn,
@@ -599,32 +599,32 @@ module system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0
     scl_o,
     scl_t,
     gpo);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *) input s_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
-  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 INTERRUPT INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output iic2intc_irpt;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WSTRB" *) input [3:0]s_axi_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WVALID" *) input s_axi_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WREADY" *) output s_axi_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *) output [1:0]s_axi_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BVALID" *) output s_axi_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BREADY" *) input s_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input [8:0]s_axi_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *) input s_axi_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *) output s_axi_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output [31:0]s_axi_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) input s_axi_rready;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 IIC SDA_I" *) (* x_interface_parameter = "XIL_INTERFACENAME IIC, BOARD.ASSOCIATED_PARAM IIC_BOARD_INTERFACE" *) input sda_i;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 IIC SDA_O" *) output sda_o;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 IIC SDA_T" *) output sda_t;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 IIC SCL_I" *) input scl_i;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 IIC SCL_O" *) output scl_o;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 IIC SCL_T" *) output scl_t;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *) input s_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTERRUPT INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output iic2intc_irpt;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WSTRB" *) input [3:0]s_axi_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WVALID" *) input s_axi_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WREADY" *) output s_axi_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *) output [1:0]s_axi_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BVALID" *) output s_axi_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BREADY" *) input s_axi_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input [8:0]s_axi_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *) input s_axi_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *) output s_axi_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output [31:0]s_axi_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) input s_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC SDA_I" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME IIC, BOARD.ASSOCIATED_PARAM IIC_BOARD_INTERFACE" *) input sda_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC SDA_O" *) output sda_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC SDA_T" *) output sda_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC SCL_I" *) input scl_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC SCL_O" *) output scl_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 IIC SCL_T" *) output scl_t;
   output [1:0]gpo;
 
   wire [1:0]gpo;
@@ -663,7 +663,7 @@ module system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0
   (* C_SDA_INERTIAL_DELAY = "0" *) 
   (* C_SDA_LEVEL = "1" *) 
   (* C_SMBUS_PMBUS_HOST = "0" *) 
-  (* C_S_AXI_ACLK_FREQ_HZ = "100000000" *) 
+  (* C_S_AXI_ACLK_FREQ_HZ = "83333000" *) 
   (* C_S_AXI_ADDR_WIDTH = "9" *) 
   (* C_S_AXI_DATA_WIDTH = "32" *) 
   (* C_TEN_BIT_ADR = "0" *) 
@@ -698,8 +698,8 @@ module system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0
         .sda_t(sda_t));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "PmodHYGRO_axi_timer_0_0,axi_timer,{}" *) (* ORIG_REF_NAME = "PmodHYGRO_axi_timer_0_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "axi_timer,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "PmodHYGRO_axi_timer_0_0,axi_timer,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "PmodHYGRO_axi_timer_0_0" *) 
+(* X_CORE_INFO = "axi_timer,Vivado 2019.1" *) 
 module system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0
    (capturetrig0,
     capturetrig1,
@@ -732,27 +732,27 @@ module system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0
   output generateout0;
   output generateout1;
   output pwm0;
-  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 INTERRUPT INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output interrupt;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTERRUPT INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output interrupt;
   input freeze;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *) input s_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 S_AXI_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [4:0]s_axi_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WSTRB" *) input [3:0]s_axi_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WVALID" *) input s_axi_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WREADY" *) output s_axi_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *) output [1:0]s_axi_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BVALID" *) output s_axi_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BREADY" *) input s_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input [4:0]s_axi_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *) input s_axi_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *) output s_axi_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output [31:0]s_axi_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) input s_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *) input s_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S_AXI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [4:0]s_axi_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WSTRB" *) input [3:0]s_axi_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WVALID" *) input s_axi_wvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WREADY" *) output s_axi_wready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *) output [1:0]s_axi_bresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BVALID" *) output s_axi_bvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BREADY" *) input s_axi_bready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input [4:0]s_axi_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *) input s_axi_arvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *) output s_axi_arready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output [31:0]s_axi_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) input s_axi_rready;
 
   wire capturetrig0;
   wire capturetrig1;
@@ -820,8 +820,8 @@ module system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "PmodHYGRO_pmod_bridge_0_0,pmod_concat,{}" *) (* ORIG_REF_NAME = "PmodHYGRO_pmod_bridge_0_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "pmod_concat,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "PmodHYGRO_pmod_bridge_0_0,pmod_concat,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "PmodHYGRO_pmod_bridge_0_0" *) 
+(* X_CORE_INFO = "pmod_concat,Vivado 2019.1" *) 
 module system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0
    (in_top_i2c_gpio_bus_I,
     in_top_i2c_gpio_bus_O,
@@ -856,39 +856,39 @@ module system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0
     out5_T,
     out6_T,
     out7_T);
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 I2C_GPIO_Top_Row TRI_I" *) output [1:0]in_top_i2c_gpio_bus_I;
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 I2C_GPIO_Top_Row TRI_O" *) input [1:0]in_top_i2c_gpio_bus_O;
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 I2C_GPIO_Top_Row TRI_T" *) input [1:0]in_top_i2c_gpio_bus_T;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 I2C_Top_Row SCL_I" *) output in2_I;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 I2C_Top_Row SDA_I" *) output in3_I;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 I2C_Top_Row SCL_O" *) input in2_O;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 I2C_Top_Row SDA_O" *) input in3_O;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 I2C_Top_Row SCL_T" *) input in2_T;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 I2C_Top_Row SDA_T" *) input in3_T;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_I" *) input out0_I;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_I" *) input out1_I;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_I" *) input out2_I;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_I" *) input out3_I;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_I" *) input out4_I;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_I" *) input out5_I;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_I" *) input out6_I;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_I" *) input out7_I;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_O" *) output out0_O;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_O" *) output out1_O;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_O" *) output out2_O;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_O" *) output out3_O;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_O" *) output out4_O;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_O" *) output out5_O;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_O" *) output out6_O;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_O" *) output out7_O;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_T" *) output out0_T;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_T" *) output out1_T;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_T" *) output out2_T;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_T" *) output out3_T;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_T" *) output out4_T;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_T" *) output out5_T;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_T" *) output out6_T;
-  (* x_interface_info = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_T" *) (* x_interface_parameter = "XIL_INTERFACENAME Pmod_out, BOARD.ASSOCIATED_PARAM PMOD" *) output out7_T;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 I2C_GPIO_Top_Row TRI_I" *) output [1:0]in_top_i2c_gpio_bus_I;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 I2C_GPIO_Top_Row TRI_O" *) input [1:0]in_top_i2c_gpio_bus_O;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 I2C_GPIO_Top_Row TRI_T" *) input [1:0]in_top_i2c_gpio_bus_T;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 I2C_Top_Row SCL_I" *) output in2_I;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 I2C_Top_Row SDA_I" *) output in3_I;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 I2C_Top_Row SCL_O" *) input in2_O;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 I2C_Top_Row SDA_O" *) input in3_O;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 I2C_Top_Row SCL_T" *) input in2_T;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:iic:1.0 I2C_Top_Row SDA_T" *) input in3_T;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_I" *) input out0_I;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_I" *) input out1_I;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_I" *) input out2_I;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_I" *) input out3_I;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_I" *) input out4_I;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_I" *) input out5_I;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_I" *) input out6_I;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_I" *) input out7_I;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_O" *) output out0_O;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_O" *) output out1_O;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_O" *) output out2_O;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_O" *) output out3_O;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_O" *) output out4_O;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_O" *) output out5_O;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_O" *) output out6_O;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_O" *) output out7_O;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_T" *) output out0_T;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_T" *) output out1_T;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_T" *) output out2_T;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_T" *) output out3_T;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_T" *) output out4_T;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_T" *) output out5_T;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_T" *) output out6_T;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_T" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME Pmod_out, BOARD.ASSOCIATED_PARAM PMOD" *) output out7_T;
 
   wire in2_I;
   wire in2_O;
@@ -1006,8 +1006,8 @@ module system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0
         .out7_T(out7_T));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "PmodHYGRO_xlconstant_0_0,xlconstant_v1_1_6_xlconstant,{}" *) (* ORIG_REF_NAME = "PmodHYGRO_xlconstant_0_0" *) (* downgradeipidentifiedwarnings = "yes" *) 
-(* x_core_info = "xlconstant_v1_1_6_xlconstant,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "PmodHYGRO_xlconstant_0_0,xlconstant_v1_1_6_xlconstant,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "PmodHYGRO_xlconstant_0_0" *) 
+(* X_CORE_INFO = "xlconstant_v1_1_6_xlconstant,Vivado 2019.1" *) 
 module system_100_PmodHYGRO_0_0_PmodHYGRO_xlconstant_0_0
    (dout);
   output [1:0]dout;
@@ -1226,8 +1226,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO
         .I3(Rc_addr[0]),
         .O(\Addr_Counters[1].FDRE_I_0 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[0].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[0].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1241,8 +1241,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO
         .D(\s_axi_rdata_i[7]_i_11 [7]),
         .Q(Rc_fifo_data[0]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[1].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[1].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1256,8 +1256,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO
         .D(\s_axi_rdata_i[7]_i_11 [6]),
         .Q(Rc_fifo_data[1]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[2].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[2].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1271,8 +1271,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO
         .D(\s_axi_rdata_i[7]_i_11 [5]),
         .Q(Rc_fifo_data[2]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[3].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[3].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1286,8 +1286,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO
         .D(\s_axi_rdata_i[7]_i_11 [4]),
         .Q(Rc_fifo_data[3]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[4].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[4].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1301,8 +1301,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO
         .D(\s_axi_rdata_i[7]_i_11 [3]),
         .Q(Rc_fifo_data[4]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[5].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[5].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1316,8 +1316,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO
         .D(\s_axi_rdata_i[7]_i_11 [2]),
         .Q(Rc_fifo_data[5]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[6].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[6].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1331,8 +1331,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO
         .D(\s_axi_rdata_i[7]_i_11 [1]),
         .Q(Rc_fifo_data[6]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[7].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[7].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1622,8 +1622,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO_0
        (.I0(Tx_addr[3]),
         .O(p_0_in));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[0].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[0].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1637,8 +1637,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO_0
         .D(s_axi_wdata[7]),
         .Q(Tx_fifo_data[0]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[1].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[1].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1652,8 +1652,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO_0
         .D(s_axi_wdata[6]),
         .Q(Tx_fifo_data[1]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[2].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[2].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1667,8 +1667,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO_0
         .D(s_axi_wdata[5]),
         .Q(Tx_fifo_data[2]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[3].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[3].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1682,8 +1682,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO_0
         .D(s_axi_wdata[4]),
         .Q(Tx_fifo_data[3]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[4].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[4].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1697,8 +1697,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO_0
         .D(s_axi_wdata[3]),
         .Q(Tx_fifo_data[4]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[5].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[5].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1712,8 +1712,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO_0
         .D(s_axi_wdata[2]),
         .Q(Tx_fifo_data[5]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[6].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[6].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1727,8 +1727,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO_0
         .D(s_axi_wdata[1]),
         .Q(Tx_fifo_data[6]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[7].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[7].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1971,8 +1971,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO__parameterized0
         .I3(\Addr_Counters[2].FDRE_I_n_0 ),
         .O(\Addr_Counters[1].FDRE_I_0 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM[0].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM[0].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -1986,8 +1986,8 @@ module system_100_PmodHYGRO_0_0_SRL_FIFO__parameterized0
         .D(ctrlFifoDin[0]),
         .Q(dynamic_MSMS[0]));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  (* srl_bus_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM " *) 
-  (* srl_name = "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM[1].SRL16E_I " *) 
+  (* srl_bus_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM " *) 
+  (* srl_name = "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM[1].SRL16E_I " *) 
   SRL16E #(
     .INIT(16'h0000),
     .IS_CLK_INVERTED(1'b0)) 
@@ -4454,9 +4454,9 @@ endmodule
 
 (* C_DEFAULT_VALUE = "8'b00000000" *) (* C_FAMILY = "artix7" *) (* C_GPO_WIDTH = "2" *) 
 (* C_IIC_FREQ = "100000" *) (* C_SCL_INERTIAL_DELAY = "0" *) (* C_SDA_INERTIAL_DELAY = "0" *) 
-(* C_SDA_LEVEL = "1" *) (* C_SMBUS_PMBUS_HOST = "0" *) (* C_S_AXI_ACLK_FREQ_HZ = "100000000" *) 
+(* C_SDA_LEVEL = "1" *) (* C_SMBUS_PMBUS_HOST = "0" *) (* C_S_AXI_ACLK_FREQ_HZ = "83333000" *) 
 (* C_S_AXI_ADDR_WIDTH = "9" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TEN_BIT_ADR = "0" *) 
-(* ORIG_REF_NAME = "axi_iic" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_iic" *) 
 module system_100_PmodHYGRO_0_0_axi_iic
    (s_axi_aclk,
     s_axi_aresetn,
@@ -5772,7 +5772,7 @@ endmodule
 (* C_COUNT_WIDTH = "32" *) (* C_FAMILY = "artix7" *) (* C_GEN0_ASSERT = "1'b1" *) 
 (* C_GEN1_ASSERT = "1'b1" *) (* C_ONE_TIMER_ONLY = "1" *) (* C_S_AXI_ADDR_WIDTH = "5" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRIG0_ASSERT = "1'b1" *) (* C_TRIG1_ASSERT = "1'b1" *) 
-(* ORIG_REF_NAME = "axi_timer" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_timer" *) 
 module system_100_PmodHYGRO_0_0_axi_timer
    (capturetrig0,
     capturetrig1,
@@ -13143,36 +13143,36 @@ module system_100_PmodHYGRO_0_0_reg_interface
         .D(s_axi_wdata[1]),
         .Q(\timing_param_tbuf_i_reg[7]_0 [1]),
         .R(Bus2IIC_Reset));
-  FDSE \timing_param_tbuf_i_reg[2] 
+  FDRE \timing_param_tbuf_i_reg[2] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[3]),
         .D(s_axi_wdata[2]),
         .Q(\timing_param_tbuf_i_reg[7]_0 [2]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDRE \timing_param_tbuf_i_reg[3] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[3]),
         .D(s_axi_wdata[3]),
         .Q(\timing_param_tbuf_i_reg[7]_0 [3]),
         .R(Bus2IIC_Reset));
-  FDSE \timing_param_tbuf_i_reg[4] 
+  FDRE \timing_param_tbuf_i_reg[4] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[3]),
         .D(s_axi_wdata[4]),
         .Q(\timing_param_tbuf_i_reg[7]_0 [4]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDSE \timing_param_tbuf_i_reg[5] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[3]),
         .D(s_axi_wdata[5]),
         .Q(\timing_param_tbuf_i_reg[7]_0 [5]),
         .S(Bus2IIC_Reset));
-  FDSE \timing_param_tbuf_i_reg[6] 
+  FDRE \timing_param_tbuf_i_reg[6] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[3]),
         .D(s_axi_wdata[6]),
         .Q(\timing_param_tbuf_i_reg[7]_0 [6]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDSE \timing_param_tbuf_i_reg[7] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[3]),
@@ -13269,12 +13269,12 @@ module system_100_PmodHYGRO_0_0_reg_interface
         .D(s_axi_wdata[2]),
         .Q(\timing_param_thdsta_i_reg[7]_0 [2]),
         .S(Bus2IIC_Reset));
-  FDSE \timing_param_thdsta_i_reg[3] 
+  FDRE \timing_param_thdsta_i_reg[3] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[5]),
         .D(s_axi_wdata[3]),
         .Q(\timing_param_thdsta_i_reg[7]_0 [3]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDRE \timing_param_thdsta_i_reg[4] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[5]),
@@ -13287,18 +13287,18 @@ module system_100_PmodHYGRO_0_0_reg_interface
         .D(s_axi_wdata[5]),
         .Q(\timing_param_thdsta_i_reg[7]_0 [5]),
         .S(Bus2IIC_Reset));
-  FDRE \timing_param_thdsta_i_reg[6] 
+  FDSE \timing_param_thdsta_i_reg[6] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[5]),
         .D(s_axi_wdata[6]),
         .Q(\timing_param_thdsta_i_reg[7]_0 [6]),
-        .R(Bus2IIC_Reset));
-  FDSE \timing_param_thdsta_i_reg[7] 
+        .S(Bus2IIC_Reset));
+  FDRE \timing_param_thdsta_i_reg[7] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[5]),
         .D(s_axi_wdata[7]),
         .Q(\timing_param_thdsta_i_reg[7]_0 [7]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDSE \timing_param_thdsta_i_reg[8] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[5]),
@@ -13323,36 +13323,36 @@ module system_100_PmodHYGRO_0_0_reg_interface
         .D(s_axi_wdata[1]),
         .Q(\timing_param_thigh_i_reg[7]_0 [1]),
         .R(Bus2IIC_Reset));
-  FDSE \timing_param_thigh_i_reg[2] 
+  FDRE \timing_param_thigh_i_reg[2] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[2]),
         .D(s_axi_wdata[2]),
         .Q(\timing_param_thigh_i_reg[7]_0 [2]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDSE \timing_param_thigh_i_reg[3] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[2]),
         .D(s_axi_wdata[3]),
         .Q(\timing_param_thigh_i_reg[7]_0 [3]),
         .S(Bus2IIC_Reset));
-  FDRE \timing_param_thigh_i_reg[4] 
+  FDSE \timing_param_thigh_i_reg[4] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[2]),
         .D(s_axi_wdata[4]),
         .Q(\timing_param_thigh_i_reg[7]_0 [4]),
-        .R(Bus2IIC_Reset));
-  FDSE \timing_param_thigh_i_reg[5] 
+        .S(Bus2IIC_Reset));
+  FDRE \timing_param_thigh_i_reg[5] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[2]),
         .D(s_axi_wdata[5]),
         .Q(\timing_param_thigh_i_reg[7]_0 [5]),
-        .S(Bus2IIC_Reset));
-  FDSE \timing_param_thigh_i_reg[6] 
+        .R(Bus2IIC_Reset));
+  FDRE \timing_param_thigh_i_reg[6] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[2]),
         .D(s_axi_wdata[6]),
         .Q(\timing_param_thigh_i_reg[7]_0 [6]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDSE \timing_param_thigh_i_reg[7] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[2]),
@@ -13383,36 +13383,36 @@ module system_100_PmodHYGRO_0_0_reg_interface
         .D(s_axi_wdata[1]),
         .Q(Timing_param_tlow[1]),
         .R(Bus2IIC_Reset));
-  FDSE \timing_param_tlow_i_reg[2] 
+  FDRE \timing_param_tlow_i_reg[2] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[1]),
         .D(s_axi_wdata[2]),
         .Q(Timing_param_tlow[2]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDSE \timing_param_tlow_i_reg[3] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[1]),
         .D(s_axi_wdata[3]),
         .Q(Timing_param_tlow[3]),
         .S(Bus2IIC_Reset));
-  FDRE \timing_param_tlow_i_reg[4] 
+  FDSE \timing_param_tlow_i_reg[4] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[1]),
         .D(s_axi_wdata[4]),
         .Q(\timing_param_tlow_i_reg[7]_0 [1]),
-        .R(Bus2IIC_Reset));
-  FDSE \timing_param_tlow_i_reg[5] 
+        .S(Bus2IIC_Reset));
+  FDRE \timing_param_tlow_i_reg[5] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[1]),
         .D(s_axi_wdata[5]),
         .Q(\timing_param_tlow_i_reg[7]_0 [2]),
-        .S(Bus2IIC_Reset));
-  FDSE \timing_param_tlow_i_reg[6] 
+        .R(Bus2IIC_Reset));
+  FDRE \timing_param_tlow_i_reg[6] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[1]),
         .D(s_axi_wdata[6]),
         .Q(\timing_param_tlow_i_reg[7]_0 [3]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDSE \timing_param_tlow_i_reg[7] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[1]),
@@ -13437,30 +13437,30 @@ module system_100_PmodHYGRO_0_0_reg_interface
         .D(s_axi_wdata[0]),
         .Q(\timing_param_tsudat_i_reg[8]_0 [0]),
         .S(Bus2IIC_Reset));
-  FDSE \timing_param_tsudat_i_reg[1] 
+  FDRE \timing_param_tsudat_i_reg[1] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[4]),
         .D(s_axi_wdata[1]),
         .Q(\timing_param_tsudat_i_reg[8]_0 [1]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDSE \timing_param_tsudat_i_reg[2] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[4]),
         .D(s_axi_wdata[2]),
         .Q(\timing_param_tsudat_i_reg[8]_0 [2]),
         .S(Bus2IIC_Reset));
-  FDRE \timing_param_tsudat_i_reg[3] 
+  FDSE \timing_param_tsudat_i_reg[3] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[4]),
         .D(s_axi_wdata[3]),
         .Q(\timing_param_tsudat_i_reg[8]_0 [3]),
-        .R(Bus2IIC_Reset));
-  FDSE \timing_param_tsudat_i_reg[4] 
+        .S(Bus2IIC_Reset));
+  FDRE \timing_param_tsudat_i_reg[4] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[4]),
         .D(s_axi_wdata[4]),
         .Q(Timing_param_tsudat[4]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDSE \timing_param_tsudat_i_reg[5] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[4]),
@@ -13521,36 +13521,36 @@ module system_100_PmodHYGRO_0_0_reg_interface
         .D(s_axi_wdata[4]),
         .Q(\timing_param_tsusta_i_reg[8]_0 [4]),
         .S(Bus2IIC_Reset));
-  FDSE \timing_param_tsusta_i_reg[5] 
+  FDRE \timing_param_tsusta_i_reg[5] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[7]),
         .D(s_axi_wdata[5]),
         .Q(\timing_param_tsusta_i_reg[8]_0 [5]),
-        .S(Bus2IIC_Reset));
-  FDRE \timing_param_tsusta_i_reg[6] 
+        .R(Bus2IIC_Reset));
+  FDSE \timing_param_tsusta_i_reg[6] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[7]),
         .D(s_axi_wdata[6]),
         .Q(\timing_param_tsusta_i_reg[8]_0 [6]),
-        .R(Bus2IIC_Reset));
-  FDRE \timing_param_tsusta_i_reg[7] 
+        .S(Bus2IIC_Reset));
+  FDSE \timing_param_tsusta_i_reg[7] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[7]),
         .D(s_axi_wdata[7]),
         .Q(\timing_param_tsusta_i_reg[8]_0 [7]),
-        .R(Bus2IIC_Reset));
-  FDRE \timing_param_tsusta_i_reg[8] 
+        .S(Bus2IIC_Reset));
+  FDSE \timing_param_tsusta_i_reg[8] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[7]),
         .D(s_axi_wdata[8]),
         .Q(\timing_param_tsusta_i_reg[8]_0 [8]),
-        .R(Bus2IIC_Reset));
-  FDSE \timing_param_tsusta_i_reg[9] 
+        .S(Bus2IIC_Reset));
+  FDRE \timing_param_tsusta_i_reg[9] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[7]),
         .D(s_axi_wdata[9]),
         .Q(Timing_param_tsusta),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDRE \timing_param_tsusto_i_reg[0] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[6]),
@@ -13563,36 +13563,36 @@ module system_100_PmodHYGRO_0_0_reg_interface
         .D(s_axi_wdata[1]),
         .Q(\timing_param_tsusto_i_reg[7]_0 [1]),
         .R(Bus2IIC_Reset));
-  FDSE \timing_param_tsusto_i_reg[2] 
+  FDRE \timing_param_tsusto_i_reg[2] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[6]),
         .D(s_axi_wdata[2]),
         .Q(\timing_param_tsusto_i_reg[7]_0 [2]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDRE \timing_param_tsusto_i_reg[3] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[6]),
         .D(s_axi_wdata[3]),
         .Q(\timing_param_tsusto_i_reg[7]_0 [3]),
         .R(Bus2IIC_Reset));
-  FDSE \timing_param_tsusto_i_reg[4] 
+  FDRE \timing_param_tsusto_i_reg[4] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[6]),
         .D(s_axi_wdata[4]),
         .Q(\timing_param_tsusto_i_reg[7]_0 [4]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDSE \timing_param_tsusto_i_reg[5] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[6]),
         .D(s_axi_wdata[5]),
         .Q(\timing_param_tsusto_i_reg[7]_0 [5]),
         .S(Bus2IIC_Reset));
-  FDSE \timing_param_tsusto_i_reg[6] 
+  FDRE \timing_param_tsusto_i_reg[6] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[6]),
         .D(s_axi_wdata[6]),
         .Q(\timing_param_tsusto_i_reg[7]_0 [6]),
-        .S(Bus2IIC_Reset));
+        .R(Bus2IIC_Reset));
   FDSE \timing_param_tsusto_i_reg[7] 
        (.C(s_axi_aclk),
         .CE(Bus2IIC_WrCE[6]),

@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Sat Sep  5 21:57:15 2020
+-- Date        : Sun Sep  6 12:34:13 2020
 -- Host        : l4study running 64-bit Ubuntu 18.04.5 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/timothystotts/Workareas/GitHub/timothystotts/fpga-iic-hygro-tester-1/HYGRO-Tester-Design-AXI/IPI-BDs/system_100/ip/system_100_PmodHYGRO_0_0/system_100_PmodHYGRO_0_0_stub.vhdl
@@ -84,7 +84,7 @@ attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "AXI_LITE_IIC_araddr[8:0],AXI_LITE_IIC_arready,AXI_LITE_IIC_arvalid,AXI_LITE_IIC_awaddr[8:0],AXI_LITE_IIC_awready,AXI_LITE_IIC_awvalid,AXI_LITE_IIC_bready,AXI_LITE_IIC_bresp[1:0],AXI_LITE_IIC_bvalid,AXI_LITE_IIC_rdata[31:0],AXI_LITE_IIC_rready,AXI_LITE_IIC_rresp[1:0],AXI_LITE_IIC_rvalid,AXI_LITE_IIC_wdata[31:0],AXI_LITE_IIC_wready,AXI_LITE_IIC_wstrb[3:0],AXI_LITE_IIC_wvalid,AXI_LITE_TMR_araddr[8:0],AXI_LITE_TMR_arready,AXI_LITE_TMR_arvalid,AXI_LITE_TMR_awaddr[8:0],AXI_LITE_TMR_awready,AXI_LITE_TMR_awvalid,AXI_LITE_TMR_bready,AXI_LITE_TMR_bresp[1:0],AXI_LITE_TMR_bvalid,AXI_LITE_TMR_rdata[31:0],AXI_LITE_TMR_rready,AXI_LITE_TMR_rresp[1:0],AXI_LITE_TMR_rvalid,AXI_LITE_TMR_wdata[31:0],AXI_LITE_TMR_wready,AXI_LITE_TMR_wstrb[3:0],AXI_LITE_TMR_wvalid,I2C_Interrupt,Pmod_out_pin10_i,Pmod_out_pin10_o,Pmod_out_pin10_t,Pmod_out_pin1_i,Pmod_out_pin1_o,Pmod_out_pin1_t,Pmod_out_pin2_i,Pmod_out_pin2_o,Pmod_out_pin2_t,Pmod_out_pin3_i,Pmod_out_pin3_o,Pmod_out_pin3_t,Pmod_out_pin4_i,Pmod_out_pin4_o,Pmod_out_pin4_t,Pmod_out_pin7_i,Pmod_out_pin7_o,Pmod_out_pin7_t,Pmod_out_pin8_i,Pmod_out_pin8_o,Pmod_out_pin8_t,Pmod_out_pin9_i,Pmod_out_pin9_o,Pmod_out_pin9_t,s_axi_aclk,s_axi_aresetn";
-attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "PmodHYGRO,Vivado 2019.1";
+attribute X_CORE_INFO : string;
+attribute X_CORE_INFO of stub : architecture is "PmodHYGRO,Vivado 2019.1";
 begin
 end;

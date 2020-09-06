@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Sat Sep  5 21:57:16 2020
+-- Date        : Sun Sep  6 12:34:13 2020
 -- Host        : l4study running 64-bit Ubuntu 18.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/timothystotts/Workareas/GitHub/timothystotts/fpga-iic-hygro-tester-1/HYGRO-Tester-Design-AXI/IPI-BDs/system_100/ip/system_100_PmodHYGRO_0_0/system_100_PmodHYGRO_0_0_sim_netlist.vhdl
@@ -20,12 +20,12 @@ entity system_100_PmodHYGRO_0_0_PmodHYGRO_xlconstant_0_0 is
   );
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of system_100_PmodHYGRO_0_0_PmodHYGRO_xlconstant_0_0 : entity is "PmodHYGRO_xlconstant_0_0,xlconstant_v1_1_6_xlconstant,{}";
+  attribute DowngradeIPIdentifiedWarnings : string;
+  attribute DowngradeIPIdentifiedWarnings of system_100_PmodHYGRO_0_0_PmodHYGRO_xlconstant_0_0 : entity is "yes";
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_100_PmodHYGRO_0_0_PmodHYGRO_xlconstant_0_0 : entity is "PmodHYGRO_xlconstant_0_0";
-  attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of system_100_PmodHYGRO_0_0_PmodHYGRO_xlconstant_0_0 : entity is "yes";
-  attribute x_core_info : string;
-  attribute x_core_info of system_100_PmodHYGRO_0_0_PmodHYGRO_xlconstant_0_0 : entity is "xlconstant_v1_1_6_xlconstant,Vivado 2019.1";
+  attribute X_CORE_INFO : string;
+  attribute X_CORE_INFO of system_100_PmodHYGRO_0_0_PmodHYGRO_xlconstant_0_0 : entity is "xlconstant_v1_1_6_xlconstant,Vivado 2019.1";
 end system_100_PmodHYGRO_0_0_PmodHYGRO_xlconstant_0_0;
 
 architecture STRUCTURE of system_100_PmodHYGRO_0_0_PmodHYGRO_xlconstant_0_0 is
@@ -105,30 +105,30 @@ architecture STRUCTURE of system_100_PmodHYGRO_0_0_SRL_FIFO is
   attribute SOFT_HLUTNM of \Data_Exists_DFF_i_2__0\ : label is "soft_lutpair61";
   attribute BOX_TYPE of \FIFO_RAM[0].SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \FIFO_RAM[0].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
+  attribute srl_bus_name of \FIFO_RAM[0].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
   attribute srl_name : string;
-  attribute srl_name of \FIFO_RAM[0].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[0].SRL16E_I ";
+  attribute srl_name of \FIFO_RAM[0].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[0].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[1].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[1].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[1].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[1].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[1].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[1].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[1].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[2].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[2].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[2].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[2].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[2].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[2].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[2].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[3].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[3].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[3].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[3].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[3].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[3].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[3].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[4].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[4].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[4].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[4].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[4].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[4].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[4].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[5].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[5].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[5].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[5].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[5].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[5].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[5].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[6].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[6].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[6].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[6].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[6].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[6].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[6].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[7].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[7].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[7].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[7].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[7].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[7].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/READ_FIFO_I/FIFO_RAM[7].SRL16E_I ";
   attribute SOFT_HLUTNM of \RD_FIFO_CNTRL.ro_prev_i_i_3\ : label is "soft_lutpair62";
   attribute SOFT_HLUTNM of \sr_i[1]_i_1\ : label is "soft_lutpair62";
   attribute SOFT_HLUTNM of \sr_i[2]_i_1\ : label is "soft_lutpair61";
@@ -550,30 +550,30 @@ architecture STRUCTURE of system_100_PmodHYGRO_0_0_SRL_FIFO_0 is
   attribute SOFT_HLUTNM of Data_Exists_DFF_i_3 : label is "soft_lutpair68";
   attribute BOX_TYPE of \FIFO_RAM[0].SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \FIFO_RAM[0].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
+  attribute srl_bus_name of \FIFO_RAM[0].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
   attribute srl_name : string;
-  attribute srl_name of \FIFO_RAM[0].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[0].SRL16E_I ";
+  attribute srl_name of \FIFO_RAM[0].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[0].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[1].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[1].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[1].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[1].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[1].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[1].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[1].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[2].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[2].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[2].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[2].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[2].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[2].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[2].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[3].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[3].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[3].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[3].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[3].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[3].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[3].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[4].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[4].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[4].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[4].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[4].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[4].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[4].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[5].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[5].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[5].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[5].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[5].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[5].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[5].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[6].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[6].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[6].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[6].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[6].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[6].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[6].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[7].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[7].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[7].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[7].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[7].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[7].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_I/FIFO_RAM[7].SRL16E_I ";
   attribute SOFT_HLUTNM of \sr_i[0]_i_1\ : label is "soft_lutpair67";
   attribute SOFT_HLUTNM of \sr_i[3]_i_1\ : label is "soft_lutpair68";
 begin
@@ -998,12 +998,12 @@ architecture STRUCTURE of \system_100_PmodHYGRO_0_0_SRL_FIFO__parameterized0\ is
   attribute SOFT_HLUTNM of \Data_Exists_DFF_i_3__0\ : label is "soft_lutpair66";
   attribute BOX_TYPE of \FIFO_RAM[0].SRL16E_I\ : label is "PRIMITIVE";
   attribute srl_bus_name : string;
-  attribute srl_bus_name of \FIFO_RAM[0].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM ";
+  attribute srl_bus_name of \FIFO_RAM[0].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM ";
   attribute srl_name : string;
-  attribute srl_name of \FIFO_RAM[0].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM[0].SRL16E_I ";
+  attribute srl_name of \FIFO_RAM[0].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM[0].SRL16E_I ";
   attribute BOX_TYPE of \FIFO_RAM[1].SRL16E_I\ : label is "PRIMITIVE";
-  attribute srl_bus_name of \FIFO_RAM[1].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM ";
-  attribute srl_name of \FIFO_RAM[1].SRL16E_I\ : label is "U0/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM[1].SRL16E_I ";
+  attribute srl_bus_name of \FIFO_RAM[1].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM ";
+  attribute srl_name of \FIFO_RAM[1].SRL16E_I\ : label is "inst/axi_iic_0/U0/\X_IIC/WRITE_FIFO_CTRL_I/FIFO_RAM[1].SRL16E_I ";
 begin
   Data_Exists_DFF_0 <= \^data_exists_dff_0\;
   dynamic_MSMS(0 to 1) <= \^dynamic_msms\(0 to 1);
@@ -7351,13 +7351,13 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_tbuf_i_reg[7]_0\(1),
       R => Bus2IIC_Reset
     );
-\timing_param_tbuf_i_reg[2]\: unisim.vcomponents.FDSE
+\timing_param_tbuf_i_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(3),
       D => s_axi_wdata(2),
       Q => \^timing_param_tbuf_i_reg[7]_0\(2),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_tbuf_i_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -7367,13 +7367,13 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_tbuf_i_reg[7]_0\(3),
       R => Bus2IIC_Reset
     );
-\timing_param_tbuf_i_reg[4]\: unisim.vcomponents.FDSE
+\timing_param_tbuf_i_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(3),
       D => s_axi_wdata(4),
       Q => \^timing_param_tbuf_i_reg[7]_0\(4),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_tbuf_i_reg[5]\: unisim.vcomponents.FDSE
      port map (
@@ -7383,13 +7383,13 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_tbuf_i_reg[7]_0\(5),
       S => Bus2IIC_Reset
     );
-\timing_param_tbuf_i_reg[6]\: unisim.vcomponents.FDSE
+\timing_param_tbuf_i_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(3),
       D => s_axi_wdata(6),
       Q => \^timing_param_tbuf_i_reg[7]_0\(6),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_tbuf_i_reg[7]\: unisim.vcomponents.FDSE
      port map (
@@ -7519,13 +7519,13 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_thdsta_i_reg[7]_0\(2),
       S => Bus2IIC_Reset
     );
-\timing_param_thdsta_i_reg[3]\: unisim.vcomponents.FDSE
+\timing_param_thdsta_i_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(5),
       D => s_axi_wdata(3),
       Q => \^timing_param_thdsta_i_reg[7]_0\(3),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_thdsta_i_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -7543,21 +7543,21 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_thdsta_i_reg[7]_0\(5),
       S => Bus2IIC_Reset
     );
-\timing_param_thdsta_i_reg[6]\: unisim.vcomponents.FDRE
+\timing_param_thdsta_i_reg[6]\: unisim.vcomponents.FDSE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(5),
       D => s_axi_wdata(6),
       Q => \^timing_param_thdsta_i_reg[7]_0\(6),
-      R => Bus2IIC_Reset
+      S => Bus2IIC_Reset
     );
-\timing_param_thdsta_i_reg[7]\: unisim.vcomponents.FDSE
+\timing_param_thdsta_i_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(5),
       D => s_axi_wdata(7),
       Q => \^timing_param_thdsta_i_reg[7]_0\(7),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_thdsta_i_reg[8]\: unisim.vcomponents.FDSE
      port map (
@@ -7591,13 +7591,13 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_thigh_i_reg[7]_0\(1),
       R => Bus2IIC_Reset
     );
-\timing_param_thigh_i_reg[2]\: unisim.vcomponents.FDSE
+\timing_param_thigh_i_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(2),
       D => s_axi_wdata(2),
       Q => \^timing_param_thigh_i_reg[7]_0\(2),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_thigh_i_reg[3]\: unisim.vcomponents.FDSE
      port map (
@@ -7607,29 +7607,29 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_thigh_i_reg[7]_0\(3),
       S => Bus2IIC_Reset
     );
-\timing_param_thigh_i_reg[4]\: unisim.vcomponents.FDRE
+\timing_param_thigh_i_reg[4]\: unisim.vcomponents.FDSE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(2),
       D => s_axi_wdata(4),
       Q => \^timing_param_thigh_i_reg[7]_0\(4),
-      R => Bus2IIC_Reset
+      S => Bus2IIC_Reset
     );
-\timing_param_thigh_i_reg[5]\: unisim.vcomponents.FDSE
+\timing_param_thigh_i_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(2),
       D => s_axi_wdata(5),
       Q => \^timing_param_thigh_i_reg[7]_0\(5),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
-\timing_param_thigh_i_reg[6]\: unisim.vcomponents.FDSE
+\timing_param_thigh_i_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(2),
       D => s_axi_wdata(6),
       Q => \^timing_param_thigh_i_reg[7]_0\(6),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_thigh_i_reg[7]\: unisim.vcomponents.FDSE
      port map (
@@ -7671,13 +7671,13 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => Timing_param_tlow(1),
       R => Bus2IIC_Reset
     );
-\timing_param_tlow_i_reg[2]\: unisim.vcomponents.FDSE
+\timing_param_tlow_i_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(1),
       D => s_axi_wdata(2),
       Q => Timing_param_tlow(2),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_tlow_i_reg[3]\: unisim.vcomponents.FDSE
      port map (
@@ -7687,29 +7687,29 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => Timing_param_tlow(3),
       S => Bus2IIC_Reset
     );
-\timing_param_tlow_i_reg[4]\: unisim.vcomponents.FDRE
+\timing_param_tlow_i_reg[4]\: unisim.vcomponents.FDSE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(1),
       D => s_axi_wdata(4),
       Q => \^timing_param_tlow_i_reg[7]_0\(1),
-      R => Bus2IIC_Reset
+      S => Bus2IIC_Reset
     );
-\timing_param_tlow_i_reg[5]\: unisim.vcomponents.FDSE
+\timing_param_tlow_i_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(1),
       D => s_axi_wdata(5),
       Q => \^timing_param_tlow_i_reg[7]_0\(2),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
-\timing_param_tlow_i_reg[6]\: unisim.vcomponents.FDSE
+\timing_param_tlow_i_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(1),
       D => s_axi_wdata(6),
       Q => \^timing_param_tlow_i_reg[7]_0\(3),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_tlow_i_reg[7]\: unisim.vcomponents.FDSE
      port map (
@@ -7743,13 +7743,13 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_tsudat_i_reg[8]_0\(0),
       S => Bus2IIC_Reset
     );
-\timing_param_tsudat_i_reg[1]\: unisim.vcomponents.FDSE
+\timing_param_tsudat_i_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(4),
       D => s_axi_wdata(1),
       Q => \^timing_param_tsudat_i_reg[8]_0\(1),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_tsudat_i_reg[2]\: unisim.vcomponents.FDSE
      port map (
@@ -7759,21 +7759,21 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_tsudat_i_reg[8]_0\(2),
       S => Bus2IIC_Reset
     );
-\timing_param_tsudat_i_reg[3]\: unisim.vcomponents.FDRE
+\timing_param_tsudat_i_reg[3]\: unisim.vcomponents.FDSE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(4),
       D => s_axi_wdata(3),
       Q => \^timing_param_tsudat_i_reg[8]_0\(3),
-      R => Bus2IIC_Reset
+      S => Bus2IIC_Reset
     );
-\timing_param_tsudat_i_reg[4]\: unisim.vcomponents.FDSE
+\timing_param_tsudat_i_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(4),
       D => s_axi_wdata(4),
       Q => Timing_param_tsudat(4),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_tsudat_i_reg[5]\: unisim.vcomponents.FDSE
      port map (
@@ -7855,45 +7855,45 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_tsusta_i_reg[8]_0\(4),
       S => Bus2IIC_Reset
     );
-\timing_param_tsusta_i_reg[5]\: unisim.vcomponents.FDSE
+\timing_param_tsusta_i_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(7),
       D => s_axi_wdata(5),
       Q => \^timing_param_tsusta_i_reg[8]_0\(5),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
-\timing_param_tsusta_i_reg[6]\: unisim.vcomponents.FDRE
+\timing_param_tsusta_i_reg[6]\: unisim.vcomponents.FDSE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(7),
       D => s_axi_wdata(6),
       Q => \^timing_param_tsusta_i_reg[8]_0\(6),
-      R => Bus2IIC_Reset
+      S => Bus2IIC_Reset
     );
-\timing_param_tsusta_i_reg[7]\: unisim.vcomponents.FDRE
+\timing_param_tsusta_i_reg[7]\: unisim.vcomponents.FDSE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(7),
       D => s_axi_wdata(7),
       Q => \^timing_param_tsusta_i_reg[8]_0\(7),
-      R => Bus2IIC_Reset
+      S => Bus2IIC_Reset
     );
-\timing_param_tsusta_i_reg[8]\: unisim.vcomponents.FDRE
+\timing_param_tsusta_i_reg[8]\: unisim.vcomponents.FDSE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(7),
       D => s_axi_wdata(8),
       Q => \^timing_param_tsusta_i_reg[8]_0\(8),
-      R => Bus2IIC_Reset
+      S => Bus2IIC_Reset
     );
-\timing_param_tsusta_i_reg[9]\: unisim.vcomponents.FDSE
+\timing_param_tsusta_i_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(7),
       D => s_axi_wdata(9),
       Q => Timing_param_tsusta(9),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_tsusto_i_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -7911,13 +7911,13 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_tsusto_i_reg[7]_0\(1),
       R => Bus2IIC_Reset
     );
-\timing_param_tsusto_i_reg[2]\: unisim.vcomponents.FDSE
+\timing_param_tsusto_i_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(6),
       D => s_axi_wdata(2),
       Q => \^timing_param_tsusto_i_reg[7]_0\(2),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_tsusto_i_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -7927,13 +7927,13 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_tsusto_i_reg[7]_0\(3),
       R => Bus2IIC_Reset
     );
-\timing_param_tsusto_i_reg[4]\: unisim.vcomponents.FDSE
+\timing_param_tsusto_i_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(6),
       D => s_axi_wdata(4),
       Q => \^timing_param_tsusto_i_reg[7]_0\(4),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_tsusto_i_reg[5]\: unisim.vcomponents.FDSE
      port map (
@@ -7943,13 +7943,13 @@ sda_cout_reg_i_5: unisim.vcomponents.LUT2
       Q => \^timing_param_tsusto_i_reg[7]_0\(5),
       S => Bus2IIC_Reset
     );
-\timing_param_tsusto_i_reg[6]\: unisim.vcomponents.FDSE
+\timing_param_tsusto_i_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => Bus2IIC_WrCE(6),
       D => s_axi_wdata(6),
       Q => \^timing_param_tsusto_i_reg[7]_0\(6),
-      S => Bus2IIC_Reset
+      R => Bus2IIC_Reset
     );
 \timing_param_tsusto_i_reg[7]\: unisim.vcomponents.FDSE
      port map (
@@ -9704,12 +9704,12 @@ entity system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0 is
   );
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0 : entity is "PmodHYGRO_pmod_bridge_0_0,pmod_concat,{}";
+  attribute DowngradeIPIdentifiedWarnings : string;
+  attribute DowngradeIPIdentifiedWarnings of system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0 : entity is "yes";
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0 : entity is "PmodHYGRO_pmod_bridge_0_0";
-  attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0 : entity is "yes";
-  attribute x_core_info : string;
-  attribute x_core_info of system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0 : entity is "pmod_concat,Vivado 2019.1";
+  attribute X_CORE_INFO : string;
+  attribute X_CORE_INFO of system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0 : entity is "pmod_concat,Vivado 2019.1";
 end system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0;
 
 architecture STRUCTURE of system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0 is
@@ -9728,42 +9728,42 @@ architecture STRUCTURE of system_100_PmodHYGRO_0_0_PmodHYGRO_pmod_bridge_0_0 is
   attribute Bottom_Row_Interface of inst : label is "Disabled";
   attribute Top_Row_Interface : string;
   attribute Top_Row_Interface of inst : label is "I2C";
-  attribute x_interface_info : string;
-  attribute x_interface_info of in2_I : signal is "xilinx.com:interface:iic:1.0 I2C_Top_Row SCL_I";
-  attribute x_interface_info of in2_O : signal is "xilinx.com:interface:iic:1.0 I2C_Top_Row SCL_O";
-  attribute x_interface_info of in2_T : signal is "xilinx.com:interface:iic:1.0 I2C_Top_Row SCL_T";
-  attribute x_interface_info of in3_I : signal is "xilinx.com:interface:iic:1.0 I2C_Top_Row SDA_I";
-  attribute x_interface_info of in3_O : signal is "xilinx.com:interface:iic:1.0 I2C_Top_Row SDA_O";
-  attribute x_interface_info of in3_T : signal is "xilinx.com:interface:iic:1.0 I2C_Top_Row SDA_T";
-  attribute x_interface_info of out0_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_I";
-  attribute x_interface_info of out0_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_O";
-  attribute x_interface_info of out0_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_T";
-  attribute x_interface_info of out1_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_I";
-  attribute x_interface_info of out1_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_O";
-  attribute x_interface_info of out1_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_T";
-  attribute x_interface_info of out2_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_I";
-  attribute x_interface_info of out2_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_O";
-  attribute x_interface_info of out2_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_T";
-  attribute x_interface_info of out3_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_I";
-  attribute x_interface_info of out3_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_O";
-  attribute x_interface_info of out3_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_T";
-  attribute x_interface_info of out4_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_I";
-  attribute x_interface_info of out4_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_O";
-  attribute x_interface_info of out4_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_T";
-  attribute x_interface_info of out5_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_I";
-  attribute x_interface_info of out5_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_O";
-  attribute x_interface_info of out5_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_T";
-  attribute x_interface_info of out6_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_I";
-  attribute x_interface_info of out6_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_O";
-  attribute x_interface_info of out6_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_T";
-  attribute x_interface_info of out7_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_I";
-  attribute x_interface_info of out7_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_O";
-  attribute x_interface_info of out7_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_T";
-  attribute x_interface_parameter : string;
-  attribute x_interface_parameter of out7_T : signal is "XIL_INTERFACENAME Pmod_out, BOARD.ASSOCIATED_PARAM PMOD";
-  attribute x_interface_info of in_top_i2c_gpio_bus_I : signal is "xilinx.com:interface:gpio:1.0 I2C_GPIO_Top_Row TRI_I";
-  attribute x_interface_info of in_top_i2c_gpio_bus_O : signal is "xilinx.com:interface:gpio:1.0 I2C_GPIO_Top_Row TRI_O";
-  attribute x_interface_info of in_top_i2c_gpio_bus_T : signal is "xilinx.com:interface:gpio:1.0 I2C_GPIO_Top_Row TRI_T";
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of in2_I : signal is "xilinx.com:interface:iic:1.0 I2C_Top_Row SCL_I";
+  attribute X_INTERFACE_INFO of in2_O : signal is "xilinx.com:interface:iic:1.0 I2C_Top_Row SCL_O";
+  attribute X_INTERFACE_INFO of in2_T : signal is "xilinx.com:interface:iic:1.0 I2C_Top_Row SCL_T";
+  attribute X_INTERFACE_INFO of in3_I : signal is "xilinx.com:interface:iic:1.0 I2C_Top_Row SDA_I";
+  attribute X_INTERFACE_INFO of in3_O : signal is "xilinx.com:interface:iic:1.0 I2C_Top_Row SDA_O";
+  attribute X_INTERFACE_INFO of in3_T : signal is "xilinx.com:interface:iic:1.0 I2C_Top_Row SDA_T";
+  attribute X_INTERFACE_INFO of out0_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_I";
+  attribute X_INTERFACE_INFO of out0_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_O";
+  attribute X_INTERFACE_INFO of out0_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_T";
+  attribute X_INTERFACE_INFO of out1_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_I";
+  attribute X_INTERFACE_INFO of out1_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_O";
+  attribute X_INTERFACE_INFO of out1_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_T";
+  attribute X_INTERFACE_INFO of out2_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_I";
+  attribute X_INTERFACE_INFO of out2_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_O";
+  attribute X_INTERFACE_INFO of out2_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_T";
+  attribute X_INTERFACE_INFO of out3_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_I";
+  attribute X_INTERFACE_INFO of out3_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_O";
+  attribute X_INTERFACE_INFO of out3_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_T";
+  attribute X_INTERFACE_INFO of out4_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_I";
+  attribute X_INTERFACE_INFO of out4_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_O";
+  attribute X_INTERFACE_INFO of out4_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_T";
+  attribute X_INTERFACE_INFO of out5_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_I";
+  attribute X_INTERFACE_INFO of out5_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_O";
+  attribute X_INTERFACE_INFO of out5_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_T";
+  attribute X_INTERFACE_INFO of out6_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_I";
+  attribute X_INTERFACE_INFO of out6_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_O";
+  attribute X_INTERFACE_INFO of out6_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_T";
+  attribute X_INTERFACE_INFO of out7_I : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_I";
+  attribute X_INTERFACE_INFO of out7_O : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_O";
+  attribute X_INTERFACE_INFO of out7_T : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_T";
+  attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of out7_T : signal is "XIL_INTERFACENAME Pmod_out, BOARD.ASSOCIATED_PARAM PMOD";
+  attribute X_INTERFACE_INFO of in_top_i2c_gpio_bus_I : signal is "xilinx.com:interface:gpio:1.0 I2C_GPIO_Top_Row TRI_I";
+  attribute X_INTERFACE_INFO of in_top_i2c_gpio_bus_O : signal is "xilinx.com:interface:gpio:1.0 I2C_GPIO_Top_Row TRI_O";
+  attribute X_INTERFACE_INFO of in_top_i2c_gpio_bus_T : signal is "xilinx.com:interface:gpio:1.0 I2C_GPIO_Top_Row TRI_T";
 begin
 inst: entity work.system_100_PmodHYGRO_0_0_pmod_concat
      port map (
@@ -18803,10 +18803,10 @@ entity system_100_PmodHYGRO_0_0_axi_timer is
   attribute C_TRIG0_ASSERT of system_100_PmodHYGRO_0_0_axi_timer : entity is "1'b1";
   attribute C_TRIG1_ASSERT : string;
   attribute C_TRIG1_ASSERT of system_100_PmodHYGRO_0_0_axi_timer : entity is "1'b1";
+  attribute DowngradeIPIdentifiedWarnings : string;
+  attribute DowngradeIPIdentifiedWarnings of system_100_PmodHYGRO_0_0_axi_timer : entity is "yes";
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_100_PmodHYGRO_0_0_axi_timer : entity is "axi_timer";
-  attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of system_100_PmodHYGRO_0_0_axi_timer : entity is "yes";
 end system_100_PmodHYGRO_0_0_axi_timer;
 
 architecture STRUCTURE of system_100_PmodHYGRO_0_0_axi_timer is
@@ -19998,12 +19998,12 @@ entity system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0 is
   );
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0 : entity is "PmodHYGRO_axi_timer_0_0,axi_timer,{}";
+  attribute DowngradeIPIdentifiedWarnings : string;
+  attribute DowngradeIPIdentifiedWarnings of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0 : entity is "yes";
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0 : entity is "PmodHYGRO_axi_timer_0_0";
-  attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0 : entity is "yes";
-  attribute x_core_info : string;
-  attribute x_core_info of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0 : entity is "axi_timer,Vivado 2019.1";
+  attribute X_CORE_INFO : string;
+  attribute X_CORE_INFO of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0 : entity is "axi_timer,Vivado 2019.1";
 end system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0;
 
 architecture STRUCTURE of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0 is
@@ -20026,32 +20026,32 @@ architecture STRUCTURE of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_timer_0_0 is
   attribute C_TRIG1_ASSERT : string;
   attribute C_TRIG1_ASSERT of U0 : label is "1'b1";
   attribute downgradeipidentifiedwarnings of U0 : label is "yes";
-  attribute x_interface_info : string;
-  attribute x_interface_info of interrupt : signal is "xilinx.com:signal:interrupt:1.0 INTERRUPT INTERRUPT";
-  attribute x_interface_parameter : string;
-  attribute x_interface_parameter of interrupt : signal is "XIL_INTERFACENAME INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1";
-  attribute x_interface_info of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK";
-  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0";
-  attribute x_interface_info of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S_AXI_RST RST";
-  attribute x_interface_parameter of s_axi_aresetn : signal is "XIL_INTERFACENAME S_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
-  attribute x_interface_info of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";
-  attribute x_interface_info of s_axi_arvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARVALID";
-  attribute x_interface_info of s_axi_awready : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWREADY";
-  attribute x_interface_info of s_axi_awvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWVALID";
-  attribute x_interface_info of s_axi_bready : signal is "xilinx.com:interface:aximm:1.0 S_AXI BREADY";
-  attribute x_interface_info of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI BVALID";
-  attribute x_interface_info of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
-  attribute x_interface_info of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
-  attribute x_interface_info of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";
-  attribute x_interface_info of s_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI WVALID";
-  attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
-  attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
-  attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI BRESP";
-  attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI RDATA";
-  attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI RRESP";
-  attribute x_interface_info of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI WDATA";
-  attribute x_interface_info of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S_AXI WSTRB";
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of interrupt : signal is "xilinx.com:signal:interrupt:1.0 INTERRUPT INTERRUPT";
+  attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of interrupt : signal is "XIL_INTERFACENAME INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1";
+  attribute X_INTERFACE_INFO of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK";
+  attribute X_INTERFACE_PARAMETER of s_axi_aclk : signal is "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S_AXI_RST RST";
+  attribute X_INTERFACE_PARAMETER of s_axi_aresetn : signal is "XIL_INTERFACENAME S_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";
+  attribute X_INTERFACE_INFO of s_axi_arvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARVALID";
+  attribute X_INTERFACE_INFO of s_axi_awready : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWREADY";
+  attribute X_INTERFACE_INFO of s_axi_awvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWVALID";
+  attribute X_INTERFACE_INFO of s_axi_bready : signal is "xilinx.com:interface:aximm:1.0 S_AXI BREADY";
+  attribute X_INTERFACE_INFO of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI BVALID";
+  attribute X_INTERFACE_INFO of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
+  attribute X_INTERFACE_INFO of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
+  attribute X_INTERFACE_INFO of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";
+  attribute X_INTERFACE_INFO of s_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI WVALID";
+  attribute X_INTERFACE_INFO of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
+  attribute X_INTERFACE_INFO of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
+  attribute X_INTERFACE_PARAMETER of s_axi_awaddr : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI BRESP";
+  attribute X_INTERFACE_INFO of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI RDATA";
+  attribute X_INTERFACE_INFO of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI RRESP";
+  attribute X_INTERFACE_INFO of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI WDATA";
+  attribute X_INTERFACE_INFO of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S_AXI WSTRB";
 begin
 U0: entity work.system_100_PmodHYGRO_0_0_axi_timer
      port map (
@@ -20134,17 +20134,17 @@ entity system_100_PmodHYGRO_0_0_axi_iic is
   attribute C_SMBUS_PMBUS_HOST : integer;
   attribute C_SMBUS_PMBUS_HOST of system_100_PmodHYGRO_0_0_axi_iic : entity is 0;
   attribute C_S_AXI_ACLK_FREQ_HZ : integer;
-  attribute C_S_AXI_ACLK_FREQ_HZ of system_100_PmodHYGRO_0_0_axi_iic : entity is 100000000;
+  attribute C_S_AXI_ACLK_FREQ_HZ of system_100_PmodHYGRO_0_0_axi_iic : entity is 83333000;
   attribute C_S_AXI_ADDR_WIDTH : integer;
   attribute C_S_AXI_ADDR_WIDTH of system_100_PmodHYGRO_0_0_axi_iic : entity is 9;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of system_100_PmodHYGRO_0_0_axi_iic : entity is 32;
   attribute C_TEN_BIT_ADR : integer;
   attribute C_TEN_BIT_ADR of system_100_PmodHYGRO_0_0_axi_iic : entity is 0;
+  attribute DowngradeIPIdentifiedWarnings : string;
+  attribute DowngradeIPIdentifiedWarnings of system_100_PmodHYGRO_0_0_axi_iic : entity is "yes";
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_100_PmodHYGRO_0_0_axi_iic : entity is "axi_iic";
-  attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of system_100_PmodHYGRO_0_0_axi_iic : entity is "yes";
 end system_100_PmodHYGRO_0_0_axi_iic;
 
 architecture STRUCTURE of system_100_PmodHYGRO_0_0_axi_iic is
@@ -20254,12 +20254,12 @@ entity system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0 is
   );
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0 : entity is "PmodHYGRO_axi_iic_0_0,axi_iic,{}";
+  attribute DowngradeIPIdentifiedWarnings : string;
+  attribute DowngradeIPIdentifiedWarnings of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0 : entity is "yes";
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0 : entity is "PmodHYGRO_axi_iic_0_0";
-  attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0 : entity is "yes";
-  attribute x_core_info : string;
-  attribute x_core_info of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0 : entity is "axi_iic,Vivado 2019.1";
+  attribute X_CORE_INFO : string;
+  attribute X_CORE_INFO of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0 : entity is "axi_iic,Vivado 2019.1";
 end system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0;
 
 architecture STRUCTURE of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0 is
@@ -20280,7 +20280,7 @@ architecture STRUCTURE of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0 is
   attribute C_SMBUS_PMBUS_HOST : integer;
   attribute C_SMBUS_PMBUS_HOST of U0 : label is 0;
   attribute C_S_AXI_ACLK_FREQ_HZ : integer;
-  attribute C_S_AXI_ACLK_FREQ_HZ of U0 : label is 100000000;
+  attribute C_S_AXI_ACLK_FREQ_HZ of U0 : label is 83333000;
   attribute C_S_AXI_ADDR_WIDTH : integer;
   attribute C_S_AXI_ADDR_WIDTH of U0 : label is 9;
   attribute C_S_AXI_DATA_WIDTH : integer;
@@ -20288,39 +20288,39 @@ architecture STRUCTURE of system_100_PmodHYGRO_0_0_PmodHYGRO_axi_iic_0_0 is
   attribute C_TEN_BIT_ADR : integer;
   attribute C_TEN_BIT_ADR of U0 : label is 0;
   attribute downgradeipidentifiedwarnings of U0 : label is "yes";
-  attribute x_interface_info : string;
-  attribute x_interface_info of iic2intc_irpt : signal is "xilinx.com:signal:interrupt:1.0 INTERRUPT INTERRUPT";
-  attribute x_interface_parameter : string;
-  attribute x_interface_parameter of iic2intc_irpt : signal is "XIL_INTERFACENAME INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1";
-  attribute x_interface_info of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK";
-  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0";
-  attribute x_interface_info of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST";
-  attribute x_interface_parameter of s_axi_aresetn : signal is "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
-  attribute x_interface_info of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";
-  attribute x_interface_info of s_axi_arvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARVALID";
-  attribute x_interface_info of s_axi_awready : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWREADY";
-  attribute x_interface_info of s_axi_awvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWVALID";
-  attribute x_interface_info of s_axi_bready : signal is "xilinx.com:interface:aximm:1.0 S_AXI BREADY";
-  attribute x_interface_info of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI BVALID";
-  attribute x_interface_info of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
-  attribute x_interface_info of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
-  attribute x_interface_info of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";
-  attribute x_interface_info of s_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI WVALID";
-  attribute x_interface_info of scl_i : signal is "xilinx.com:interface:iic:1.0 IIC SCL_I";
-  attribute x_interface_info of scl_o : signal is "xilinx.com:interface:iic:1.0 IIC SCL_O";
-  attribute x_interface_info of scl_t : signal is "xilinx.com:interface:iic:1.0 IIC SCL_T";
-  attribute x_interface_info of sda_i : signal is "xilinx.com:interface:iic:1.0 IIC SDA_I";
-  attribute x_interface_parameter of sda_i : signal is "XIL_INTERFACENAME IIC, BOARD.ASSOCIATED_PARAM IIC_BOARD_INTERFACE";
-  attribute x_interface_info of sda_o : signal is "xilinx.com:interface:iic:1.0 IIC SDA_O";
-  attribute x_interface_info of sda_t : signal is "xilinx.com:interface:iic:1.0 IIC SDA_T";
-  attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
-  attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
-  attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI BRESP";
-  attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI RDATA";
-  attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI RRESP";
-  attribute x_interface_info of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI WDATA";
-  attribute x_interface_info of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S_AXI WSTRB";
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of iic2intc_irpt : signal is "xilinx.com:signal:interrupt:1.0 INTERRUPT INTERRUPT";
+  attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of iic2intc_irpt : signal is "XIL_INTERFACENAME INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1";
+  attribute X_INTERFACE_INFO of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK";
+  attribute X_INTERFACE_PARAMETER of s_axi_aclk : signal is "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST";
+  attribute X_INTERFACE_PARAMETER of s_axi_aresetn : signal is "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";
+  attribute X_INTERFACE_INFO of s_axi_arvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARVALID";
+  attribute X_INTERFACE_INFO of s_axi_awready : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWREADY";
+  attribute X_INTERFACE_INFO of s_axi_awvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWVALID";
+  attribute X_INTERFACE_INFO of s_axi_bready : signal is "xilinx.com:interface:aximm:1.0 S_AXI BREADY";
+  attribute X_INTERFACE_INFO of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI BVALID";
+  attribute X_INTERFACE_INFO of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
+  attribute X_INTERFACE_INFO of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
+  attribute X_INTERFACE_INFO of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";
+  attribute X_INTERFACE_INFO of s_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI WVALID";
+  attribute X_INTERFACE_INFO of scl_i : signal is "xilinx.com:interface:iic:1.0 IIC SCL_I";
+  attribute X_INTERFACE_INFO of scl_o : signal is "xilinx.com:interface:iic:1.0 IIC SCL_O";
+  attribute X_INTERFACE_INFO of scl_t : signal is "xilinx.com:interface:iic:1.0 IIC SCL_T";
+  attribute X_INTERFACE_INFO of sda_i : signal is "xilinx.com:interface:iic:1.0 IIC SDA_I";
+  attribute X_INTERFACE_PARAMETER of sda_i : signal is "XIL_INTERFACENAME IIC, BOARD.ASSOCIATED_PARAM IIC_BOARD_INTERFACE";
+  attribute X_INTERFACE_INFO of sda_o : signal is "xilinx.com:interface:iic:1.0 IIC SDA_O";
+  attribute X_INTERFACE_INFO of sda_t : signal is "xilinx.com:interface:iic:1.0 IIC SDA_T";
+  attribute X_INTERFACE_INFO of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
+  attribute X_INTERFACE_INFO of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
+  attribute X_INTERFACE_PARAMETER of s_axi_awaddr : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI BRESP";
+  attribute X_INTERFACE_INFO of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI RDATA";
+  attribute X_INTERFACE_INFO of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI RRESP";
+  attribute X_INTERFACE_INFO of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI WDATA";
+  attribute X_INTERFACE_INFO of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S_AXI WSTRB";
 begin
 U0: entity work.system_100_PmodHYGRO_0_0_axi_iic
      port map (
@@ -20627,84 +20627,84 @@ entity system_100_PmodHYGRO_0_0 is
   attribute NotValidForBitStream of system_100_PmodHYGRO_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of system_100_PmodHYGRO_0_0 : entity is "system_100_PmodHYGRO_0_0,PmodHYGRO,{}";
-  attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of system_100_PmodHYGRO_0_0 : entity is "yes";
-  attribute x_core_info : string;
-  attribute x_core_info of system_100_PmodHYGRO_0_0 : entity is "PmodHYGRO,Vivado 2019.1";
+  attribute DowngradeIPIdentifiedWarnings : string;
+  attribute DowngradeIPIdentifiedWarnings of system_100_PmodHYGRO_0_0 : entity is "yes";
+  attribute X_CORE_INFO : string;
+  attribute X_CORE_INFO of system_100_PmodHYGRO_0_0 : entity is "PmodHYGRO,Vivado 2019.1";
 end system_100_PmodHYGRO_0_0;
 
 architecture STRUCTURE of system_100_PmodHYGRO_0_0 is
-  attribute x_interface_info : string;
-  attribute x_interface_info of AXI_LITE_IIC_arready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC ARREADY";
-  attribute x_interface_info of AXI_LITE_IIC_arvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC ARVALID";
-  attribute x_interface_info of AXI_LITE_IIC_awready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC AWREADY";
-  attribute x_interface_info of AXI_LITE_IIC_awvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC AWVALID";
-  attribute x_interface_info of AXI_LITE_IIC_bready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC BREADY";
-  attribute x_interface_info of AXI_LITE_IIC_bvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC BVALID";
-  attribute x_interface_info of AXI_LITE_IIC_rready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RREADY";
-  attribute x_interface_info of AXI_LITE_IIC_rvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RVALID";
-  attribute x_interface_info of AXI_LITE_IIC_wready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WREADY";
-  attribute x_interface_info of AXI_LITE_IIC_wvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WVALID";
-  attribute x_interface_info of AXI_LITE_TMR_arready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR ARREADY";
-  attribute x_interface_info of AXI_LITE_TMR_arvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR ARVALID";
-  attribute x_interface_info of AXI_LITE_TMR_awready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR AWREADY";
-  attribute x_interface_info of AXI_LITE_TMR_awvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR AWVALID";
-  attribute x_interface_info of AXI_LITE_TMR_bready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR BREADY";
-  attribute x_interface_info of AXI_LITE_TMR_bvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR BVALID";
-  attribute x_interface_info of AXI_LITE_TMR_rready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RREADY";
-  attribute x_interface_info of AXI_LITE_TMR_rvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RVALID";
-  attribute x_interface_info of AXI_LITE_TMR_wready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WREADY";
-  attribute x_interface_info of AXI_LITE_TMR_wvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WVALID";
-  attribute x_interface_info of I2C_Interrupt : signal is "xilinx.com:signal:interrupt:1.0 INTR.I2C_INTERRUPT INTERRUPT, xilinx.com:signal:interrupt:1.0 I2C_Interrupt INTERRUPT";
-  attribute x_interface_parameter : string;
-  attribute x_interface_parameter of I2C_Interrupt : signal is "XIL_INTERFACENAME INTR.I2C_INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1, XIL_INTERFACENAME I2C_Interrupt, SENSITIVITY LEVEL_HIGH, PortWidth 1";
-  attribute x_interface_info of Pmod_out_pin10_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_I";
-  attribute x_interface_parameter of Pmod_out_pin10_i : signal is "XIL_INTERFACENAME Pmod_out, BUSIF.BOARD_INTERFACE Custom, BOARD.ASSOCIATED_PARAM PMOD";
-  attribute x_interface_info of Pmod_out_pin10_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_O";
-  attribute x_interface_info of Pmod_out_pin10_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_T";
-  attribute x_interface_info of Pmod_out_pin1_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_I";
-  attribute x_interface_info of Pmod_out_pin1_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_O";
-  attribute x_interface_info of Pmod_out_pin1_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_T";
-  attribute x_interface_info of Pmod_out_pin2_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_I";
-  attribute x_interface_info of Pmod_out_pin2_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_O";
-  attribute x_interface_info of Pmod_out_pin2_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_T";
-  attribute x_interface_info of Pmod_out_pin3_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_I";
-  attribute x_interface_info of Pmod_out_pin3_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_O";
-  attribute x_interface_info of Pmod_out_pin3_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_T";
-  attribute x_interface_info of Pmod_out_pin4_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_I";
-  attribute x_interface_info of Pmod_out_pin4_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_O";
-  attribute x_interface_info of Pmod_out_pin4_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_T";
-  attribute x_interface_info of Pmod_out_pin7_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_I";
-  attribute x_interface_info of Pmod_out_pin7_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_O";
-  attribute x_interface_info of Pmod_out_pin7_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_T";
-  attribute x_interface_info of Pmod_out_pin8_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_I";
-  attribute x_interface_info of Pmod_out_pin8_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_O";
-  attribute x_interface_info of Pmod_out_pin8_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_T";
-  attribute x_interface_info of Pmod_out_pin9_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_I";
-  attribute x_interface_info of Pmod_out_pin9_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_O";
-  attribute x_interface_info of Pmod_out_pin9_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_T";
-  attribute x_interface_info of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK";
-  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF AXI_LITE_TMR:AXI_LITE_IIC, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 83333333, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, INSERT_VIP 0";
-  attribute x_interface_info of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST";
-  attribute x_interface_parameter of s_axi_aresetn : signal is "XIL_INTERFACENAME RST.S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
-  attribute x_interface_info of AXI_LITE_IIC_araddr : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC ARADDR";
-  attribute x_interface_parameter of AXI_LITE_IIC_araddr : signal is "XIL_INTERFACENAME AXI_LITE_IIC, PROTOCOL AXI4LITE, ADDR_WIDTH 12, ID_WIDTH 0, DATA_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, READ_WRITE_MODE READ_WRITE, FREQ_HZ 83333333, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
-  attribute x_interface_info of AXI_LITE_IIC_awaddr : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC AWADDR";
-  attribute x_interface_info of AXI_LITE_IIC_bresp : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC BRESP";
-  attribute x_interface_info of AXI_LITE_IIC_rdata : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RDATA";
-  attribute x_interface_info of AXI_LITE_IIC_rresp : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RRESP";
-  attribute x_interface_info of AXI_LITE_IIC_wdata : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WDATA";
-  attribute x_interface_info of AXI_LITE_IIC_wstrb : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WSTRB";
-  attribute x_interface_info of AXI_LITE_TMR_araddr : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR ARADDR";
-  attribute x_interface_parameter of AXI_LITE_TMR_araddr : signal is "XIL_INTERFACENAME AXI_LITE_TMR, DATA_WIDTH 32, PROTOCOL AXI4LITE, ID_WIDTH 0, ADDR_WIDTH 12, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, BUSER_WIDTH 0, RUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, FREQ_HZ 83333333, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
-  attribute x_interface_info of AXI_LITE_TMR_awaddr : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR AWADDR";
-  attribute x_interface_info of AXI_LITE_TMR_bresp : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR BRESP";
-  attribute x_interface_info of AXI_LITE_TMR_rdata : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RDATA";
-  attribute x_interface_info of AXI_LITE_TMR_rresp : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RRESP";
-  attribute x_interface_info of AXI_LITE_TMR_wdata : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WDATA";
-  attribute x_interface_info of AXI_LITE_TMR_wstrb : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WSTRB";
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_arready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC ARREADY";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_arvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC ARVALID";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_awready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC AWREADY";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_awvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC AWVALID";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_bready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC BREADY";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_bvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC BVALID";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_rready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RREADY";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_rvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RVALID";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_wready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WREADY";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_wvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WVALID";
+  attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of AXI_LITE_IIC_wvalid : signal is "XIL_INTERFACENAME AXI_LITE_IIC, PROTOCOL AXI4LITE, ADDR_WIDTH 12, ID_WIDTH 0, DATA_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, READ_WRITE_MODE READ_WRITE, FREQ_HZ 83333333, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_arready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR ARREADY";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_arvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR ARVALID";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_awready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR AWREADY";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_awvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR AWVALID";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_bready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR BREADY";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_bvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR BVALID";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_rready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RREADY";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_rvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RVALID";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_wready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WREADY";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_wvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WVALID";
+  attribute X_INTERFACE_PARAMETER of AXI_LITE_TMR_wvalid : signal is "XIL_INTERFACENAME AXI_LITE_TMR, DATA_WIDTH 32, PROTOCOL AXI4LITE, ID_WIDTH 0, ADDR_WIDTH 12, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, BUSER_WIDTH 0, RUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, FREQ_HZ 83333333, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of I2C_Interrupt : signal is "xilinx.com:signal:interrupt:1.0 INTR.I2C_INTERRUPT INTERRUPT, xilinx.com:signal:interrupt:1.0 I2C_Interrupt INTERRUPT";
+  attribute X_INTERFACE_PARAMETER of I2C_Interrupt : signal is "XIL_INTERFACENAME INTR.I2C_INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1, XIL_INTERFACENAME I2C_Interrupt, SENSITIVITY LEVEL_HIGH, PortWidth 1";
+  attribute X_INTERFACE_INFO of Pmod_out_pin10_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_I";
+  attribute X_INTERFACE_INFO of Pmod_out_pin10_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_O";
+  attribute X_INTERFACE_INFO of Pmod_out_pin10_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_T";
+  attribute X_INTERFACE_INFO of Pmod_out_pin1_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_I";
+  attribute X_INTERFACE_INFO of Pmod_out_pin1_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_O";
+  attribute X_INTERFACE_INFO of Pmod_out_pin1_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN1_T";
+  attribute X_INTERFACE_INFO of Pmod_out_pin2_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_I";
+  attribute X_INTERFACE_INFO of Pmod_out_pin2_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_O";
+  attribute X_INTERFACE_INFO of Pmod_out_pin2_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN2_T";
+  attribute X_INTERFACE_INFO of Pmod_out_pin3_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_I";
+  attribute X_INTERFACE_INFO of Pmod_out_pin3_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_O";
+  attribute X_INTERFACE_INFO of Pmod_out_pin3_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN3_T";
+  attribute X_INTERFACE_INFO of Pmod_out_pin4_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_I";
+  attribute X_INTERFACE_INFO of Pmod_out_pin4_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_O";
+  attribute X_INTERFACE_INFO of Pmod_out_pin4_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN4_T";
+  attribute X_INTERFACE_INFO of Pmod_out_pin7_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_I";
+  attribute X_INTERFACE_INFO of Pmod_out_pin7_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_O";
+  attribute X_INTERFACE_INFO of Pmod_out_pin7_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN7_T";
+  attribute X_INTERFACE_INFO of Pmod_out_pin8_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_I";
+  attribute X_INTERFACE_INFO of Pmod_out_pin8_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_O";
+  attribute X_INTERFACE_INFO of Pmod_out_pin8_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN8_T";
+  attribute X_INTERFACE_INFO of Pmod_out_pin9_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_I";
+  attribute X_INTERFACE_INFO of Pmod_out_pin9_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_O";
+  attribute X_INTERFACE_INFO of Pmod_out_pin9_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN9_T";
+  attribute X_INTERFACE_PARAMETER of Pmod_out_pin9_t : signal is "XIL_INTERFACENAME Pmod_out, BUSIF.BOARD_INTERFACE Custom, BOARD.ASSOCIATED_PARAM PMOD";
+  attribute X_INTERFACE_INFO of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK";
+  attribute X_INTERFACE_PARAMETER of s_axi_aclk : signal is "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF AXI_LITE_TMR:AXI_LITE_IIC, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 83333333, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST";
+  attribute X_INTERFACE_PARAMETER of s_axi_aresetn : signal is "XIL_INTERFACENAME RST.S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_araddr : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC ARADDR";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_awaddr : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC AWADDR";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_bresp : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC BRESP";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_rdata : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RDATA";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_rresp : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC RRESP";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_wdata : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WDATA";
+  attribute X_INTERFACE_INFO of AXI_LITE_IIC_wstrb : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_IIC WSTRB";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_araddr : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR ARADDR";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_awaddr : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR AWADDR";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_bresp : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR BRESP";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_rdata : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RDATA";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_rresp : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR RRESP";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_wdata : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WDATA";
+  attribute X_INTERFACE_INFO of AXI_LITE_TMR_wstrb : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_TMR WSTRB";
 begin
-U0: entity work.system_100_PmodHYGRO_0_0_PmodHYGRO
+inst: entity work.system_100_PmodHYGRO_0_0_PmodHYGRO
      port map (
       AXI_LITE_IIC_araddr(8 downto 0) => AXI_LITE_IIC_araddr(8 downto 0),
       AXI_LITE_IIC_arready => AXI_LITE_IIC_arready,

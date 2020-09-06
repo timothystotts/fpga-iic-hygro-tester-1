@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Sat Sep  5 21:57:15 2020
+// Date        : Sun Sep  6 12:34:12 2020
 // Host        : l4study running 64-bit Ubuntu 18.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/timothystotts/Workareas/GitHub/timothystotts/fpga-iic-hygro-tester-1/HYGRO-Tester-Design-AXI/IPI-BDs/system_100/ip/system_100_PmodHYGRO_0_0/system_100_PmodHYGRO_0_0_stub.v
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* x_core_info = "PmodHYGRO,Vivado 2019.1" *)
+(* X_CORE_INFO = "PmodHYGRO,Vivado 2019.1" *)
 module system_100_PmodHYGRO_0_0(AXI_LITE_IIC_araddr, AXI_LITE_IIC_arready, 
   AXI_LITE_IIC_arvalid, AXI_LITE_IIC_awaddr, AXI_LITE_IIC_awready, AXI_LITE_IIC_awvalid, 
   AXI_LITE_IIC_bready, AXI_LITE_IIC_bresp, AXI_LITE_IIC_bvalid, AXI_LITE_IIC_rdata, 

@@ -65,6 +65,22 @@
 /* Global constants */
 #define CAPTURED_STRING_LENGTH 11
 
+typedef enum {
+	OP_NONE,
+	OP_POLL_HYGRO,
+	OP_UNKNOWN
+} t_op_mode;
+
+typedef enum {
+	DISP_NONE,
+	DISP_BOTH_CELCIUS,
+	DISP_BOTH_FARH,
+	DISP_ONLY_TEMP_C,
+	DISP_ONLY_TEMP_F,
+	DISP_ONLY_HUMID,
+	DISP_UNKNOWN
+} t_display_mode;
+
 /* Global types */
 typedef struct T_EXPERIMENT_DATA_TAG
 {
@@ -88,6 +104,9 @@ typedef struct T_EXPERIMENT_DATA_TAG
 	/* CLS display text lines */
 	char szInfo1[32];
 	char szInfo2[32];
+	/* Operational state */
+	t_op_mode opMode;
+	t_display_mode dispMode;
 } t_experiment_data;
 
 /* Function prototypes */
@@ -113,6 +132,8 @@ static void Experiment_Initialize(t_experiment_data* expData)
 	expData->buttonsRead = 0x00000000;
 	expData->switchesReadPrev = 0x00000000;
 	expData->buttonsReadPrev = 0x00000000;
+	expData->opMode = OP_UNKNOWN;
+	expData->dispMode = DISP_UNKNOWN;
 }
 
 /*-----------------------------------------------------------*/
@@ -218,6 +239,72 @@ static void Experiment_UpdateCLSDisplay(t_experiment_data* expData)
     CLS_WriteStringAtPos(&(expData->clsDevice), 1, 0, expData->szInfo2);
 }
 
+/*-----------------------------------------------------------*/
+/* Helper function to read user inputs at this time. */
+static void Experiment_readUserInputs(t_experiment_data* expData) {
+	expData->switchesReadPrev = expData->switchesRead;
+	expData->buttonsReadPrev = expData->buttonsRead;
+
+	expData->switchesRead = XGpio_DiscreteRead(&(expData->axGpio), SWTCH_SW_CHANNEL);
+	expData->buttonsRead = XGpio_DiscreteRead(&(expData->axGpio), BTNS_SW_CHANNEL);
+
+	if (expData->switchesRead == SWTCH0_MASK)
+		expData->opMode = OP_POLL_HYGRO;
+	else
+		expData->opMode = OP_NONE;
+
+	if ((expData->buttonsReadPrev == 0) && (expData->buttonsRead == BTN0_MASK))
+	{
+		if ((expData->dispMode == DISP_BOTH_FARH) || (expData->dispMode == DISP_ONLY_TEMP_F))
+			expData->dispMode = DISP_BOTH_CELCIUS;
+		else
+			expData->dispMode = DISP_BOTH_FARH;
+	}
+
+	if ((expData->buttonsReadPrev == 0) && (expData->buttonsRead == BTN1_MASK))
+	{
+		expData->dispMode = DISP_ONLY_TEMP_C;
+	}
+
+	if ((expData->buttonsReadPrev == 0) && (expData->buttonsRead == BTN2_MASK))
+	{
+		expData->dispMode = DISP_ONLY_TEMP_F;
+	}
+
+	if ((expData->buttonsReadPrev == 0) && (expData->buttonsRead == BTN3_MASK))
+	{
+		expData->dispMode = DISP_ONLY_HUMID;
+	}
+
+	switch(expData->dispMode)
+	{
+	case DISP_BOTH_CELCIUS:
+		expData->ssdDigitRight = 1;
+		expData->ssdDigitLeft = 1;
+		break;
+	case DISP_BOTH_FARH:
+		expData->ssdDigitRight = 1;
+		expData->ssdDigitLeft = 2;
+		break;
+	case DISP_ONLY_TEMP_C:
+		expData->ssdDigitRight = 0;
+		expData->ssdDigitLeft = 1;
+		break;
+	case DISP_ONLY_TEMP_F:
+		expData->ssdDigitRight = 0;
+		expData->ssdDigitLeft = 2;
+		break;
+	case DISP_ONLY_HUMID:
+		expData->ssdDigitRight = 1;
+		expData->ssdDigitLeft = 0;
+		break;
+	default:
+		expData->ssdDigitRight = 0;
+		expData->ssdDigitLeft = 0;
+		break;
+	}
+}
+
 /* Main routine */
 /*-----------------------------------------------------------*/
 int main()
@@ -229,7 +316,99 @@ int main()
 
 	for(;;)
 	{
+		/* Process inputs ten times and use this delay amount to
+		 * keep processing inputs but pause between iterations of
+		 * reading the Pmod HYGRO.
+		 */
+		for(int j = 0; j < 10; ++j)
+		{
+			Experiment_readUserInputs(&experiData);
+			usleep(10000);
+		}
 
+		if (experiData.opMode == OP_POLL_HYGRO)
+		{
+			Experiment_SetLedUpdate(&experiData, 4, 0, 100, 0);
+			Experiment_SetLedUpdate(&experiData, 5, 0, 100, 0);
+			Experiment_SetLedUpdate(&experiData, 6, 0, 100, 0);
+			Experiment_SetLedUpdate(&experiData, 7, 0, 100, 0);
+
+			Experiment_HYGROReadSensor(&experiData);
+
+			switch(experiData.dispMode)
+			{
+			case DISP_BOTH_CELCIUS:
+				snprintf(experiData.szInfo1, sizeof(experiData.szInfo1),
+						"Temp : % 3.4fC", experiData.temp_degc);
+				snprintf(experiData.szInfo2, sizeof(experiData.szInfo2),
+						"Humid: % 3.4f%%", experiData.hum_perrh);
+				Experiment_SetLedUpdate(&experiData, 0, 0, 200, 0);
+				Experiment_SetLedUpdate(&experiData, 1, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 2, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 3, 0, 0, 0);
+				break;
+			case DISP_BOTH_FARH:
+				snprintf(experiData.szInfo1, sizeof(experiData.szInfo1),
+						"Temp : % 3.4fF", experiData.temp_degf);
+				snprintf(experiData.szInfo2, sizeof(experiData.szInfo2),
+						"Humid: % 3.4f%%", experiData.hum_perrh);
+				Experiment_SetLedUpdate(&experiData, 0, 0, 0, 200);
+				Experiment_SetLedUpdate(&experiData, 1, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 2, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 3, 0, 0, 0);
+				break;
+			case DISP_ONLY_TEMP_C:
+				snprintf(experiData.szInfo1, sizeof(experiData.szInfo1),
+						"Temp : % 3.4fC", experiData.temp_degc);
+				strcpy(experiData.szInfo2, "                ");
+				Experiment_SetLedUpdate(&experiData, 0, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 1, 0, 200, 0);
+				Experiment_SetLedUpdate(&experiData, 2, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 3, 0, 0, 0);
+				break;
+			case DISP_ONLY_TEMP_F:
+				snprintf(experiData.szInfo1, sizeof(experiData.szInfo1),
+						"Temp : % 3.4fF", experiData.temp_degf);
+				strcpy(experiData.szInfo2, "                ");
+				Experiment_SetLedUpdate(&experiData, 0, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 1, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 2, 0, 200, 0);
+				Experiment_SetLedUpdate(&experiData, 3, 0, 0, 0);
+				break;
+			case DISP_ONLY_HUMID:
+				strcpy(experiData.szInfo1, "                ");
+				snprintf(experiData.szInfo2, sizeof(experiData.szInfo2),
+						"Humid: % 3.4f%%", experiData.hum_perrh);
+				Experiment_SetLedUpdate(&experiData, 0, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 1, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 2, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 3, 0, 200, 0);
+				break;
+			default:
+				strcpy(experiData.szInfo1, "Idle. Press");
+				strcpy(experiData.szInfo2, "a button.");
+				Experiment_SetLedUpdate(&experiData, 0, 0, 0, 200);
+				Experiment_SetLedUpdate(&experiData, 1, 0, 0, 200);
+				Experiment_SetLedUpdate(&experiData, 2, 0, 0, 200);
+				Experiment_SetLedUpdate(&experiData, 3, 0, 0, 200);
+				break;
+			}
+		}
+		else
+		{
+			Experiment_SetLedUpdate(&experiData, 4, 0, 0, 0);
+			Experiment_SetLedUpdate(&experiData, 5, 0, 0, 0);
+			Experiment_SetLedUpdate(&experiData, 6, 0, 0, 0);
+			Experiment_SetLedUpdate(&experiData, 7, 0, 0, 0);
+			strcpy(experiData.szInfo1, "Idle. Enable");
+			strcpy(experiData.szInfo2, "switch zero.");
+			Experiment_SetLedUpdate(&experiData, 0, 200, 0, 0);
+			Experiment_SetLedUpdate(&experiData, 1, 200, 0, 0);
+			Experiment_SetLedUpdate(&experiData, 2, 200, 0, 0);
+			Experiment_SetLedUpdate(&experiData, 3, 200, 0, 0);
+		}
+
+		Experiment_UpdateCLSDisplay(&experiData);
 	}
 
     cleanup_platform();
