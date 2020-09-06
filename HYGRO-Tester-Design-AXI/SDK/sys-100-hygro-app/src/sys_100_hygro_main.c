@@ -88,8 +88,8 @@ typedef struct T_EXPERIMENT_DATA_TAG
 	XGpio axGpio;
 	PmodCLS clsDevice;
 	PmodHYGRO hygroDevice;
-	u32 ssdDigitRight;
-	u32 ssdDigitLeft;
+	u8 ssdDigitRight;
+	u8 ssdDigitLeft;
 	/* LED driver palettes stored */
 	t_rgb_led_palette_silk ledUpdate[8];
 	/* GPIO reading values at this point in the execution */
@@ -120,6 +120,8 @@ static void Experiment_SetLedUpdate(t_experiment_data* expData,
 		uint8_t silk, uint8_t red, uint8_t green, uint8_t blue);
 static void Experiment_HYGROReadSensor(t_experiment_data* expData);
 static void Experiment_UpdateCLSDisplay(t_experiment_data* expData);
+static u8 Experiment_convertValueToSSD(u8 value);
+static void Experiment_updateSSD(t_experiment_data* expData);
 
 /* Global variables */
 t_experiment_data experiData; // Global as that the object is always in scope, including interrupt handler.
@@ -204,10 +206,8 @@ static void Experiment_7SDInitialize(t_experiment_data* expData)
 {
 	expData->ssdDigitRight = 0;
 	expData->ssdDigitLeft = 0;
-	MUXSSD_mWriteReg(XPAR_MUXSSD_0_S00_AXI_BASEADDR,
-			MUXSSD_S00_AXI_SLV_REG0_OFFSET, expData->ssdDigitRight);
-	MUXSSD_mWriteReg(XPAR_MUXSSD_0_S00_AXI_BASEADDR,
-			MUXSSD_S00_AXI_SLV_REG1_OFFSET, expData->ssdDigitLeft);
+
+	Experiment_updateSSD(expData);
 }
 
 /*-----------------------------------------------------------*/
@@ -237,6 +237,75 @@ static void Experiment_UpdateCLSDisplay(t_experiment_data* expData)
 	CLS_DisplayClear(&(expData->clsDevice));
     CLS_WriteStringAtPos(&(expData->clsDevice), 0, 0, expData->szInfo1);
     CLS_WriteStringAtPos(&(expData->clsDevice), 1, 0, expData->szInfo2);
+}
+
+/*-----------------------------------------------------------*/
+/* Convert a 4-bit decimal value to a Pmod SSD digit segment on/off value */
+static u8 Experiment_convertValueToSSD(u8 value) {
+	u8 ret = 0x00;
+
+	switch(value) {
+	case 0:
+		ret = 0x3F;
+		break;
+	case 1:
+		ret = 0x06;
+		break;
+	case 2:
+		ret = 0x5B;
+		break;
+	case 3:
+		ret = 0x4F;
+		break;
+	case 4:
+		ret = 0x66;
+		break;
+	case 5:
+		ret = 0x6D;
+		break;
+	case 6:
+		ret = 0x7D;
+		break;
+	case 7:
+		ret = 0x07;
+		break;
+	case 8:
+		ret = 0x7F;
+		break;
+	case 9:
+		ret = 0x67;
+		break;
+	case 10:
+		ret = 0x77;
+		break;
+	case 11:
+		ret = 0x7C;
+		break;
+	case 12:
+		ret = 0x39;
+		break;
+	case 13:
+		ret = 0x5E;
+		break;
+	case 14:
+		ret = 0x79;
+		break;
+	case 15:
+		ret = 0x71;
+		break;
+	}
+
+	return ret;
+}
+
+/*-----------------------------------------------------------*/
+/* Update the right and left digits of a PmodSSD */
+static void Experiment_updateSSD(t_experiment_data* expData) {
+	u32 right = (u32) Experiment_convertValueToSSD(expData->ssdDigitRight);
+	u32 left = (u32) Experiment_convertValueToSSD(expData->ssdDigitLeft);
+
+	MUXSSD_mWriteReg(XPAR_MUXSSD_0_S00_AXI_BASEADDR, MUXSSD_S00_AXI_SLV_REG0_OFFSET, right);
+	MUXSSD_mWriteReg(XPAR_MUXSSD_0_S00_AXI_BASEADDR, MUXSSD_S00_AXI_SLV_REG1_OFFSET, left);
 }
 
 /*-----------------------------------------------------------*/
@@ -408,6 +477,7 @@ int main()
 			Experiment_SetLedUpdate(&experiData, 3, 200, 0, 0);
 		}
 
+		Experiment_updateSSD(&experiData);
 		Experiment_UpdateCLSDisplay(&experiData);
 	}
 
