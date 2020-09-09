@@ -473,83 +473,6 @@ hygro_tester_fsm #(
    single I2C read sequence. */
 assign s_hygro_config = 16'b0001000000000000;
 
-
-// /* A synchronous counter with LUT-lookup FSM to rotate the PMOD SSD display
-//    values, which is set to rotate display of each of the three values,
-//    once per ten seconds; totaling the rotation to complete each iteration
-//    at once per minute. The display rotates a display of:
-//      (a) 0x0000 (temperature register address)
-//      (b) 0x???? (temperature register value)
-//      (c) 0x0001 (relative humidity register address)
-//      (d) 0x???? (relative humidity register value)
-//      (e) 0x0002 (configuration register address)
-//      (f) 0x1000 (configuratoin register written value, static) */
-// always @(posedge s_clk_10mhz)
-// begin: p_rotate_display
-// 	if (s_rst_10mhz) begin
-// 		v_counter3 <= 0;
-// 		v_counter4 <= 0;
-// 	end else
-// 		if (v_counter3 < 10000000 * 10 - 1)
-// 			v_counter3 <= v_counter3 + 1;
-// 		else begin
-// 			v_counter3 <= 0;
-
-// 			if (v_counter4 < 5) v_counter4 <= v_counter4 + 1;
-// 			else v_counter4 <= 0;
-// 		end
-// end
-
-// /* LUT look-up based on registered counter value variable v_counter4 of process
-//    \ref p_rotate_display . */
-// always @(v_counter4, s_display_temp, s_display_humid, s_hygro_config)
-// begin: p_rotate_display_lut
-// 	case (v_counter4)
-// 		1: begin
-// 			/* Display the temperature register value. */
-// 			s_value0 = s_display_temp[3-:4];
-// 			s_value1 = s_display_temp[7-:4];
-// 			s_value2 = s_display_temp[11-:4];
-// 			s_value3 = s_display_temp[15-:4];
-// 		end
-// 		2: begin
-// 			/* Display the relative humidity regsiter address. */
-// 			s_value0 = 4'h1;
-// 			s_value1 = 4'h0;
-// 			s_value2 = 4'h0;
-// 			s_value3 = 4'h0;
-// 		end
-// 		3: begin
-// 			/* Display the relative humidty register value. */
-// 			s_value0 = s_display_humid[3-:4];
-// 			s_value1 = s_display_humid[7-:4];
-// 			s_value2 = s_display_humid[11-:4];
-// 			s_value3 = s_display_humid[15-:4];
-// 		end
-// 		4: begin
-// 			/* Display the configuration register address. */
-// 			s_value0 = 4'h2;
-// 			s_value1 = 4'h0;
-// 			s_value2 = 4'h0;
-// 			s_value3 = 4'h0;
-// 		end
-// 		5: begin
-// 			/* Display the written configuration register value. */
-// 			s_value0 = s_hygro_config[3-:4];
-// 			s_value1 = s_hygro_config[7-:4];
-// 			s_value2 = s_hygro_config[11-:4];
-// 			s_value3 = s_hygro_config[15-:4];
-// 		end
-// 		default: begin /* case 0 */
-// 			/* Display the temperature register address. */
-// 			s_value0 = 4'h0;
-// 			s_value1 = 4'h0;
-// 			s_value2 = 4'h0;
-// 			s_value3 = 4'h0;
-// 		end
-// 	endcase
-// end
-
 /* Tri-state outputs of PMOD CLS custom driver. */
 assign eo_pmod_cls_sck = so_pmod_cls_sck_t ? 1'bz : so_pmod_cls_sck_o;
 assign eo_pmod_cls_csn = so_pmod_cls_csn_t ? 1'bz : so_pmod_cls_csn_o;
@@ -560,7 +483,7 @@ assign eo_pmod_cls_dq0 = so_pmod_cls_copi_t ? 1'bz : so_pmod_cls_copi_o;
 pmod_cls_custom_driver #(
 	.parm_fast_simulation(parm_fast_simulation),
 	.FCLK(c_FCLK),
-  .FCLK_ce(2500000),
+   .FCLK_ce(2500000),
 	.parm_ext_spi_clk_ratio(32),
 	.parm_wait_cyc_bits(`c_stand_spi_wait_count_bits)
 	) u_pmod_cls_custom_driver (
@@ -602,12 +525,17 @@ lcd_text_feed #(
 // TODO: create hdc1080_readings_to_ascii module
 hdc1080_readings_to_ascii #(
 	) u_hdc1080_readings_to_ascii (
+      .i_clk(s_clk_20mhz),
+      .i_srst(s_rst_20mhz),
 		.i_display_temp(s_display_temp),
 		.i_display_humid(s_display_humid),
+      .i_hygro_op_mode(s_hygro_op_mode),
+		.i_hygro_display_mode(s_hygro_display_mode),
     	.o_txt_ascii_line1(s_hygro_txt_ascii_line1),
 		.o_txt_ascii_line2(s_hygro_txt_ascii_line2)
 	);
 
+/* The UART line contains a space between lines 1 and 2 */
 assign s_uart_dat_ascii_line = {
 	s_hygro_txt_ascii_line1,
 	8'h20,
