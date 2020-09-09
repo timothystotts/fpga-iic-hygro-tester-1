@@ -72,8 +72,7 @@ wire [15:0] s_val_humidp_f1;
     deg_c -= 40.0; // Conversion provided in reference manual
     deg_c *= 100.0;
 */
-assign s_temperature_c =
-    ((((i_display_temp[7-:8] << 8) + i_display_temp[15-:8] - 16384) * 125) >> 9);
+assign s_temperature_c = (((i_display_temp - 16384) * 125) >> 9);
 
 assign s_val_tempc_m2 = (s_temperature_c / 10000) % 10;
 assign s_val_tempc_m1 = (s_temperature_c / 1000) % 10;
@@ -81,11 +80,11 @@ assign s_val_tempc_m0 = (s_temperature_c / 100) % 10;
 assign s_val_tempc_f0 = (s_temperature_c / 10) % 10;
 assign s_val_tempc_f1 = (s_temperature_c / 1) % 10;
 
-/* ASCII Text String of sprintf: "Temp : %03.2f00C" */
+/* ASCII Text String of sprintf: "Temp : % 3.2f00C" */
 assign o_txt_ascii_line1 = {
     8'h54, 8'h65, 8'h6D, 8'h70, 8'h20, 8'h3A, 8'h20,
-    ascii_of_hdigit(s_val_tempc_m2[3-:4]),
-    ascii_of_hdigit(s_val_tempc_m1[3-:4]),
+    (s_val_tempc_m2[3-:4] == 4'h0) ? 8'h20 : ascii_of_hdigit(s_val_tempc_m2[3-:4]),
+    ((s_val_tempc_m2[3-:4] == 4'h0) && (s_val_tempc_m1[3-:4] == 4'h0)) ? 8'h20 : ascii_of_hdigit(s_val_tempc_m1[3-:4]),
     ascii_of_hdigit(s_val_tempc_m0[3-:4]),
     8'h2E,
     ascii_of_hdigit(s_val_tempc_f0[3-:4]),
@@ -98,8 +97,7 @@ assign o_txt_ascii_line1 = {
    per_rh /= 65536.0;
    per_rh *= 10000.0; // Conversion provided in reference manual
 */
-assign s_humidity_p =
-    ((((i_display_humid[7-:8] << 8) + i_display_humid[15-:8]) * 625) >> 12);
+assign s_humidity_p = ((i_display_humid * 625) >> 12);
 
 assign s_val_humidp_m2 = (s_humidity_p / 10000) % 10;
 assign s_val_humidp_m1 = (s_humidity_p / 1000) % 10;
@@ -107,11 +105,11 @@ assign s_val_humidp_m0 = (s_humidity_p / 100) % 10;
 assign s_val_humidp_f0 = (s_humidity_p / 10) % 10;
 assign s_val_humidp_f1 = (s_humidity_p / 1) % 10;
 
-/* ASCII Text String of sprintf: "Humid: %03.2f00%%" */
+/* ASCII Text String of sprintf: "Humid: % 3.2f00%%" */
 assign o_txt_ascii_line2 = {
     8'h48, 8'h75, 8'h6D, 8'h69, 8'h64, 8'h3A, 8'h20,
-    ascii_of_hdigit(s_val_humidp_m2[3-:4]),
-    ascii_of_hdigit(s_val_humidp_m1[3-:4]),
+    (s_val_humidp_m2[3-:4] == 4'h0) ? 8'h20 : ascii_of_hdigit(s_val_humidp_m2[3-:4]),
+    ((s_val_humidp_m2[3-:4] == 4'h0) && (s_val_humidp_m1[3-:4] == 4'h0)) ? 8'h20 : ascii_of_hdigit(s_val_humidp_m1[3-:4]),
     ascii_of_hdigit(s_val_humidp_m0[3-:4]),
     8'h2E,
     ascii_of_hdigit(s_val_humidp_f0[3-:4]),
