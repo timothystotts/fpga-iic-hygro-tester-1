@@ -1,4 +1,27 @@
 /*------------------------------------------------------------------------------
+-- MIT License
+--
+-- Copyright (c) 2019-2020 Timothy Stotts
+--
+-- Permission is hereby granted, free of charge, to any person obtaining a copy
+-- of this software and associated documentation files (the "Software"), to deal
+-- in the Software without restriction, including without limitation the rights
+-- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-- copies of the Software, and to permit persons to whom the Software is
+-- furnished to do so, subject to the following conditions:
+--
+-- The above copyright notice and this permission notice shall be included in
+-- all copies or substantial portions of the Software.
+--
+-- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-- SOFTWARE.
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
 -- \file pmod_hygro_i2c_solo.vhd
 --
 -- \brief Interface to the PMOD HYGRO via I2C protocol with only the one unit
@@ -8,19 +31,6 @@
 -- Theory and Design by Volnei A. Pedroni, Exercise 14.5 for the I2C control
 -- of a temperature sensor. The PMOD HYGRO from Digilent Inc is a temperature
 -- and relative humidity sensor board with I2C communication protocol.
---
--- \copyright (c) 2019-2020 Timothy Stotts as self-employment unbilled consulting
--- studies; rights for the author to reuse in employment designs or instruction
--- as a coding starting point. The copyright of derivative works will transfer
--- to employer.
-------------------------------------------------------------------------------*/
-/*------------------------------------------------------------------------------
--- \module pmod_hygro_i2c_solo
---
--- \brief An I2C Master interface for communicating with the PMOD HYGRO board
--- from a FPGA, and no other I2C slave on the bus.
---
--- \description None
 ------------------------------------------------------------------------------*/
 //Part 1: Module header:--------------------------------------------------------
 module pmod_hygro_i2c_solo(i_clk, i_rst, i_wr, i_rd, eo_scl, eo_sda_o, ei_sda_i,
