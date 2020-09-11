@@ -69,75 +69,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_proc_sys_reset_0_0/system_100_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="system_100_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_MuxSSD_0_0/system_100_MuxSSD_0_0.xci">
-          <Proxy FileSetName="system_100_MuxSSD_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_PmodCLS_0_0/system_100_PmodCLS_0_0.xci">
-          <Proxy FileSetName="system_100_PmodCLS_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_axi_timer_0_0/system_100_axi_timer_0_0.xci">
-          <Proxy FileSetName="system_100_axi_timer_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_PmodHYGRO_0_0/system_100_PmodHYGRO_0_0.xci">
-          <Proxy FileSetName="system_100_PmodHYGRO_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_axi_ethernetlite_0_0/system_100_axi_ethernetlite_0_0.xci">
-          <Proxy FileSetName="system_100_axi_ethernetlite_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_axi_uartlite_0_0/system_100_axi_uartlite_0_0.xci">
-          <Proxy FileSetName="system_100_axi_uartlite_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_PWM_1_0/system_100_PWM_1_0.xci">
-          <Proxy FileSetName="system_100_PWM_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_PWM_0_0/system_100_PWM_0_0.xci">
-          <Proxy FileSetName="system_100_PWM_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_axi_gpio_0_0/system_100_axi_gpio_0_0.xci">
-          <Proxy FileSetName="system_100_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_axi_smc_0/system_100_axi_smc_0.xci">
-          <Proxy FileSetName="system_100_axi_smc_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_xbar_0/system_100_xbar_0.xci">
-          <Proxy FileSetName="system_100_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_clk_wiz_0_0/system_100_clk_wiz_0_0.xci">
-          <Proxy FileSetName="system_100_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_mig_7series_0_0/system_100_mig_7series_0_0.xci">
-          <Proxy FileSetName="system_100_mig_7series_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_microblaze_0_0/system_100_microblaze_0_0.xci">
-          <Proxy FileSetName="system_100_microblaze_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_dlmb_v10_0/system_100_dlmb_v10_0.xci">
-          <Proxy FileSetName="system_100_dlmb_v10_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_ilmb_v10_0/system_100_ilmb_v10_0.xci">
-          <Proxy FileSetName="system_100_ilmb_v10_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_dlmb_bram_if_cntlr_0/system_100_dlmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="system_100_dlmb_bram_if_cntlr_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_ilmb_bram_if_cntlr_0/system_100_ilmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="system_100_ilmb_bram_if_cntlr_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_lmb_bram_0/system_100_lmb_bram_0.xci">
-          <Proxy FileSetName="system_100_lmb_bram_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_microblaze_0_axi_intc_0/system_100_microblaze_0_axi_intc_0.xci">
-          <Proxy FileSetName="system_100_microblaze_0_axi_intc_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_mdm_1_0/system_100_mdm_1_0.xci">
-          <Proxy FileSetName="system_100_mdm_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system_100.bd" FileRelPathName="ip/system_100_rst_mig_7series_0_83M_0/system_100_rst_mig_7series_0_83M_0.xci">
-          <Proxy FileSetName="system_100_rst_mig_7series_0_83M_0"/>
-        </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/../../IPI-BDs/system_100/hdl/system_100_wrapper.vhd">
         <FileInfo>
@@ -148,7 +79,6 @@
       <File Path="$PPRDIR/../../IPI-BDs/system_100/ip/system_100_mig_7series_0_0/board.prj">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="ScopedToCell" Val="system_100_mig_7series_0_0"/>
         </FileInfo>
       </File>
       <Config>
@@ -560,9 +490,7 @@
     </Run>
     <Run Id="system_100_PmodHYGRO_0_0_synth_1" Type="Ft3:Synth" SrcSet="system_100_PmodHYGRO_0_0" Part="xc7a100ticsg324-1L" ConstrsSet="system_100_PmodHYGRO_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system_100_PmodHYGRO_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -940,9 +868,7 @@
     </Run>
     <Run Id="system_100_PmodHYGRO_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100ticsg324-1L" ConstrsSet="system_100_PmodHYGRO_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system_100_PmodHYGRO_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

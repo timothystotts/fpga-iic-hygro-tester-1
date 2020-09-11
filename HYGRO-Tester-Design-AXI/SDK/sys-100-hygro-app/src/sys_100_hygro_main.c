@@ -389,7 +389,7 @@ int main()
 		 * keep processing inputs but pause between iterations of
 		 * reading the Pmod HYGRO.
 		 */
-		for(int j = 0; j < 10; ++j)
+		for(int j = 0; j < 100; ++j)
 		{
 			Experiment_readUserInputs(&experiData);
 			usleep(10000);
