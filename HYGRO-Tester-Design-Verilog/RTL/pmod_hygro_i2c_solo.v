@@ -162,7 +162,8 @@ clock_divider #(
 	.o_rst_div(s_i2c_rst_1x)
 	);
 
-/* The clock enables are timed for the I2C SDA line to change by the
+/* When HOLD_I2C_BOTH_SCL_EDGES is non-zero.
+   The clock enables are timed for the I2C SDA line to change by the
    master at 25% clock period after the falling edge of SCL. This allows
    sufficient setup and hold time on both clock edges, as indicated by
    the HDC1080 datasheet. It was tested experimentally that the HDC1080
@@ -220,11 +221,12 @@ generate if (HOLD_I2C_BOTH_SCL_EDGES != 0) begin
 	assign s_hold_scl_ce_stop = s_i2c_clk_1x || s_i2c_clk_ce2;
 end endgenerate
 
-/* The clock enables are timed for the I2C SDA line to change by the
-   master at 25% clock period after the falling edge of SCL. This allows
-   sufficient setup and hold time on both clock edges, as indicated by
-   the HDC1080 datasheet. It was tested experimentally that the HDC1080
-   does in fact require this alignment of the SDA line for its I2C bus
+/* When HOLD_I2C_BOTH_SCL_EDGES is zero.
+   The clock enables are timed for the I2C SDA line to change by the
+   master at 0% clock period after the falling edge of SCL. This is
+   normal setup and hold time on both clock edges, as indicated by
+   the FSM textbook. It was tested experimentally that the HDC1080
+   does in fact require different alignment of the SDA line for its I2C bus
    to function, per the timing diagrams of the datasheet. The FSM textbook
    suggested with its example that some I2C buses have this requirement;
    but the textbook example only demonstrated an implementation of SDA

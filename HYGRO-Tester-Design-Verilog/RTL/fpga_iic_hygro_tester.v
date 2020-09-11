@@ -59,7 +59,7 @@ module fpga_iic_hygro_tester(
 
 /* Disable or enable fast FSM delays for simulation instead of impelementation. */
 parameter integer parm_fast_simulation = 0;
-localparam integer c_FCLK = 40000000;
+localparam integer c_FCLK = 20000000;
 
 input wire CLK100MHZ;
 input wire i_resetn;
@@ -397,7 +397,7 @@ led_palette_pulser #(
 // TODO: Augment to pmod_hygro_custom_driver
 pmod_hygro_i2c_solo #(
 	.HOLD_I2C_BOTH_SCL_EDGES(1),
-	.FCLK(40000000),
+	.FCLK(c_FCLK),
 	.DATA_RATE(100000)
 	) u_pmod_hygro_i2c_solo (
 	.i_clk(s_clk_20mhz),
