@@ -66,7 +66,7 @@ output reg [2:0] o_hygro_display_mode;
 //Part 2: Declarations----------------------------------------------------------
 `include "hygro_tester_fsm_include.vh"
 
-localparam integer c_wr_rd_cycle_duration_clk = 10000000;
+localparam integer c_wr_rd_cycle_duration_clk = 20000000;
 
 /* This constant is set to loop device access every 40 ms for simulation, */
 /* and for synthesized results, to loop device access every 1 seconds, which
