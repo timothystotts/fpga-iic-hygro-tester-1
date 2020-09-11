@@ -412,9 +412,9 @@ int main()
 				snprintf(experiData.szInfo2, sizeof(experiData.szInfo2),
 						"Humid: % 3.4f%%", experiData.hum_perrh);
 				Experiment_SetLedUpdate(&experiData, 0, 0, 200, 0);
-				Experiment_SetLedUpdate(&experiData, 1, 0, 0, 0);
-				Experiment_SetLedUpdate(&experiData, 2, 0, 0, 0);
-				Experiment_SetLedUpdate(&experiData, 3, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 1, 16, 16, 16);
+				Experiment_SetLedUpdate(&experiData, 2, 16, 16, 16);
+				Experiment_SetLedUpdate(&experiData, 3, 16, 16, 16);
 				break;
 			case DISP_BOTH_FARH:
 				snprintf(experiData.szInfo1, sizeof(experiData.szInfo1),
@@ -422,44 +422,44 @@ int main()
 				snprintf(experiData.szInfo2, sizeof(experiData.szInfo2),
 						"Humid: % 3.4f%%", experiData.hum_perrh);
 				Experiment_SetLedUpdate(&experiData, 0, 0, 0, 200);
-				Experiment_SetLedUpdate(&experiData, 1, 0, 0, 0);
-				Experiment_SetLedUpdate(&experiData, 2, 0, 0, 0);
-				Experiment_SetLedUpdate(&experiData, 3, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 1, 16, 16, 16);
+				Experiment_SetLedUpdate(&experiData, 2, 16, 16, 16);
+				Experiment_SetLedUpdate(&experiData, 3, 16, 16, 16);
 				break;
 			case DISP_ONLY_TEMP_C:
 				snprintf(experiData.szInfo1, sizeof(experiData.szInfo1),
 						"Temp : % 3.4fC", experiData.temp_degc);
 				strcpy(experiData.szInfo2, "                ");
-				Experiment_SetLedUpdate(&experiData, 0, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 0, 16, 16, 16);
 				Experiment_SetLedUpdate(&experiData, 1, 0, 200, 0);
-				Experiment_SetLedUpdate(&experiData, 2, 0, 0, 0);
-				Experiment_SetLedUpdate(&experiData, 3, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 2, 16, 16, 16);
+				Experiment_SetLedUpdate(&experiData, 3, 16, 16, 16);
 				break;
 			case DISP_ONLY_TEMP_F:
 				snprintf(experiData.szInfo1, sizeof(experiData.szInfo1),
 						"Temp : % 3.4fF", experiData.temp_degf);
 				strcpy(experiData.szInfo2, "                ");
-				Experiment_SetLedUpdate(&experiData, 0, 0, 0, 0);
-				Experiment_SetLedUpdate(&experiData, 1, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 0, 16, 16, 16);
+				Experiment_SetLedUpdate(&experiData, 1, 16, 16, 16);
 				Experiment_SetLedUpdate(&experiData, 2, 0, 0, 200);
-				Experiment_SetLedUpdate(&experiData, 3, 0, 0, 0);
+				Experiment_SetLedUpdate(&experiData, 3, 16, 16, 16);
 				break;
 			case DISP_ONLY_HUMID:
 				strcpy(experiData.szInfo1, "                ");
 				snprintf(experiData.szInfo2, sizeof(experiData.szInfo2),
 						"Humid: % 3.4f%%", experiData.hum_perrh);
-				Experiment_SetLedUpdate(&experiData, 0, 0, 0, 0);
-				Experiment_SetLedUpdate(&experiData, 1, 0, 0, 0);
-				Experiment_SetLedUpdate(&experiData, 2, 0, 0, 0);
-				Experiment_SetLedUpdate(&experiData, 3, 0, 200, 0);
+				Experiment_SetLedUpdate(&experiData, 0, 16, 16, 16);
+				Experiment_SetLedUpdate(&experiData, 1, 16, 16, 16);
+				Experiment_SetLedUpdate(&experiData, 2, 16, 16, 16);
+				Experiment_SetLedUpdate(&experiData, 3, 128, 16, 0);
 				break;
 			default:
 				strcpy(experiData.szInfo1, "Idle. Press");
 				strcpy(experiData.szInfo2, "a button.");
-				Experiment_SetLedUpdate(&experiData, 0, 0, 0, 200);
-				Experiment_SetLedUpdate(&experiData, 1, 0, 0, 200);
-				Experiment_SetLedUpdate(&experiData, 2, 0, 0, 200);
-				Experiment_SetLedUpdate(&experiData, 3, 0, 0, 200);
+				Experiment_SetLedUpdate(&experiData, 0, 16, 16, 16);
+				Experiment_SetLedUpdate(&experiData, 1, 16, 16, 16);
+				Experiment_SetLedUpdate(&experiData, 2, 16, 16, 16);
+				Experiment_SetLedUpdate(&experiData, 3, 16, 16, 16);
 				break;
 			}
 		}
