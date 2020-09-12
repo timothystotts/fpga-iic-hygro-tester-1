@@ -50,11 +50,12 @@ standard terminology in engineering is a priority.
 ./HYGRO Sensor Readings Tester.pdf
 ```
 
-[Serial ACL Readings Tester info](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO%20Sensor%20Readings%20Tester.pdf)
+[HYGRO Sensor Readings Tester info](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO%20Sensor%20Readings%20Tester.pdf)
 
 ### Diagrams design document:
-
+```
 ./HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams.pdf
+```
 
 [HYGRO Tester Design Diagrams info](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams.pdf)
 
@@ -88,11 +89,11 @@ standard terminology in engineering is a priority.
 #### Pmod HYGRO IIC custom driver FSM for operating as a single setup and then poll once per second:
 ![HYGRO Custom Driver readings driver FSM](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-HYGRO%20FSM.svg)
 
-#### Generic Standard SPI Single Chip protocol bus driver, used by the ACL2 driver and the CLS driver
-![Generic Standard SPI Single Chip bus driver](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-SPI-generic-FSM.svg)
-
 #### CLS Custom Driver Ports diagram of the HDL designs:
 ![CLS Custom Driver Ports](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-CLS-ports.svg)
+
+#### Generic Standard SPI Single Chip protocol bus driver, used by the ACL2 driver and the CLS driver
+![Generic Standard SPI Single Chip bus driver](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-SPI-generic-FSM.svg)
 
 #### Pmod CLS Standard SPI custom driver FSM for operating the standard SPI driver to send text line refreshes to the ATmega48 microcontroller chip of the Pmod CLS:
 ![CLS Custom Driver readings driver FSM](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-CLS-driver-FSM.svg)
