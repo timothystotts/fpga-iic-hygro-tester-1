@@ -63,7 +63,7 @@ standard terminology in engineering is a priority.
 ![Target device assembly](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/img_iic-hygro-tester-assembled-20200910_145526433.jpg)
 
 #### Target device execution: Arty-A7-100T with Pmod HYGRO on test header, Pmod CLS on extension cable, Pmod SSD on extension cable
-![Target device assembly](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/img_iic-hygro-tester-executing-a-20200910_145459654.jpg)
+![Target device assembly executing](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/img_iic-hygro-tester-executing-a-20200910_145459654.jpg)
 
 #### Block diagram architecture of the HDL designs:
 ![HYGRO Tester Architecture Diagram](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-Architecture%201.svg)
