@@ -50,50 +50,50 @@ standard terminology in engineering is a priority.
 ./HYGRO Sensor Readings Tester.pdf
 ```
 
-[HYGRO Sensor Readings Tester info](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO%20Sensor%20Readings%20Tester.pdf)
+[HYGRO Sensor Readings Tester info](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO%20Sensor%20Readings%20Tester.pdf)
 
 ### Diagrams design document:
 ```
 ./HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams.pdf
 ```
 
-[HYGRO Tester Design Diagrams info](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams.pdf)
+[HYGRO Tester Design Diagrams info](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams.pdf)
 
 #### Target device assembly: Arty-A7-100T with Pmod HYGRO on test header, Pmod CLS on extension cable, Pmod SSD on extension cable
-![Target device assembly](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/img_iic-hygro-tester-assembled-20200910_145526433.jpg)
+![Target device assembly](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/img_iic-hygro-tester-assembled-20200910_145526433.jpg)
 
 #### Target device execution: Arty-A7-100T with Pmod HYGRO on test header, Pmod CLS on extension cable, Pmod SSD on extension cable
-![Target device assembly executing](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/img_iic-hygro-tester-executing-a-20200910_145459654.jpg)
+![Target device assembly executing](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/img_iic-hygro-tester-executing-a-20200910_145459654.jpg)
 
 #### Block diagram architecture of the HDL designs:
-![HYGRO Tester Architecture Diagram](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-Architecture%201.svg)
+![HYGRO Tester Architecture Diagram](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-Architecture%201.svg)
 
 #### Top Port diagram architecture of the HDL designs:
-![HYGRO Tester Top Ports Diagram](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-Top-Ports.svg)
+![HYGRO Tester Top Ports Diagram](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-Top-Ports.svg)
 
 #### LCD FSM diagram of the HDL designs:
-![LCD FSM Diagram](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-LCD-FSM.svg)
+![LCD FSM Diagram](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-LCD-FSM.svg)
 
 #### UART Feed FSM diagram of the HDL designs:
-![UART Feed FSM Diagram](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-UARTfeed.svg)
+![UART Feed FSM Diagram](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-UARTfeed.svg)
 
 #### UART TX ONLY FSM diagram of the HDL designs:
-![UART Feed FSM Diagram](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-UART-Tx-FSM.svg)
+![UART Feed FSM Diagram](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-UART-Tx-FSM.svg)
 
 #### 4-input Multi-Debouncer for 4 exclusve inputs, such as switches or buttons, of the HDL designs:
-![4-bit Multi-Debouncer](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-multi-debounce.svg)
+![4-bit Multi-Debouncer](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-multi-debounce.svg)
 
 #### HYGRO Custom Driver Ports diagram of the HDL designs:
-![HYGRO Solo Driver Ports](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-HYGRO-Ports.svg)
+![HYGRO Solo Driver Ports](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-HYGRO-Ports.svg)
 
 #### Pmod HYGRO IIC custom driver FSM for operating as a single setup and then poll once per second:
-![HYGRO Custom Driver readings driver FSM](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-HYGRO%20FSM.svg)
+![HYGRO Custom Driver readings driver FSM](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-HYGRO%20FSM.svg)
 
 #### CLS Custom Driver Ports diagram of the HDL designs:
-![CLS Custom Driver Ports](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-CLS-ports.svg)
+![CLS Custom Driver Ports](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-CLS-ports.svg)
 
 #### Generic Standard SPI Single Chip protocol bus driver, used by the ACL2 driver and the CLS driver
-![Generic Standard SPI Single Chip bus driver](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-SPI-generic-FSM.svg)
+![Generic Standard SPI Single Chip bus driver](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-SPI-generic-FSM.svg)
 
 #### Pmod CLS Standard SPI custom driver FSM for operating the standard SPI driver to send text line refreshes to the ATmega48 microcontroller chip of the Pmod CLS:
-![CLS Custom Driver readings driver FSM](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/master/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-CLS-driver-FSM.svg)
+![CLS Custom Driver readings driver FSM](https://github.com/timothystotts/fpga-iic-hygro-tester-1/blob/main/HYGRO-Tester-Design-Documents/HYGRO-Tester-Design-Diagrams-CLS-driver-FSM.svg)
