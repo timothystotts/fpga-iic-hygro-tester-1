@@ -1,0 +1,154 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Wed Dec  9 18:02:59 2020
+| Host         : l2study running 64-bit Ubuntu 18.04.5 LTS
+| Command      : report_control_sets -verbose -file fpga_iic_hygro_tester_control_sets_placed.rpt
+| Design       : fpga_iic_hygro_tester
+| Device       : xc7a100ti
+--------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    76 |
+|    Minimum number of control sets                        |    76 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   203 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    76 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     6 |
+| >= 6 to < 8        |    11 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     3 |
+| >= 16              |    48 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              95 |           46 |
+| No           | No                    | Yes                    |              28 |           19 |
+| No           | Yes                   | No                     |            1011 |          329 |
+| Yes          | No                    | No                     |               3 |            2 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             868 |          248 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+|                           Clock Signal                           |                                Enable Signal                                |                               Set/Reset Signal                              | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+|  u_one_pmod_ssd_display/u_pmod_ssd_out/u_clock_divider/o_clk_div |                                                                             |                                                                             |                1 |              1 |         1.00 |
+|  s_clk_7_37mhz_BUFG                                              | u_uart_tx_only/u_baud_1x_ce_divider/o_ce_div                                | u_reset_synch_7_37mhz/o_rst_mhz                                             |                1 |              1 |         1.00 |
+|  s_clk_7_37mhz_BUFG                                              |                                                                             |                                                                             |                1 |              1 |         1.00 |
+|  s_clk_20mhz_BUFG                                                | u_2_5mhz_ce_divider/o_ce_div                                                |                                                                             |                2 |              3 |         1.50 |
+|  s_clk_7_37mhz_BUFG                                              | u_uart_tx_only/s_i_aux                                                      | u_reset_synch_7_37mhz/o_rst_mhz                                             |                2 |              4 |         2.00 |
+|  s_clk_20mhz_BUFG                                                | u_pmod_cls_custom_driver/u_pmod_cls_stand_spi_solo/s_cls_cmd_len_aux        | u_reset_synch_20mhz/o_rst_mhz                                               |                2 |              4 |         2.00 |
+|  s_clk_20mhz_BUFG                                                | u_switches_deb_0123/si_buttons_store[3]_i_1_n_0                             | u_reset_synch_20mhz/o_rst_mhz                                               |                1 |              4 |         4.00 |
+|  s_clk_20mhz_BUFG                                                | u_buttons_deb_0123/si_buttons_store[3]_i_1_n_0                              | u_reset_synch_20mhz/o_rst_mhz                                               |                2 |              4 |         2.00 |
+|  s_clk_20mhz_BUFG                                                | u_hygro_tester_fsm/v_counter2_reg[3]_i_2_n_6                                | u_hygro_tester_fsm/v_counter2[3]_i_1_n_0                                    |                1 |              4 |         4.00 |
+|  s_clk_20mhz_BUFG                                                | u_pmod_cls_custom_driver/u_pmod_cls_stand_spi_solo/s_cls_dat_len_aux        | u_reset_synch_20mhz/o_rst_mhz                                               |                3 |              5 |         1.67 |
+|  u_one_pmod_ssd_display/u_pmod_ssd_out/u_clock_divider/o_clk_div |                                                                             | u_one_pmod_ssd_display/u_pmod_ssd_out/u_clock_divider/o_rst_div             |                3 |              6 |         2.00 |
+|  s_clk_20mhz_BUFG                                                | u_led_palette_pulser/s_ld3_led_pulse                                        | u_reset_synch_20mhz/o_rst_mhz                                               |                2 |              6 |         3.00 |
+|  s_clk_20mhz_BUFG                                                | u_led_palette_pulser/s_ld2_led_pulse                                        | u_reset_synch_20mhz/o_rst_mhz                                               |                1 |              6 |         6.00 |
+|  s_clk_20mhz_BUFG                                                | u_led_palette_pulser/s_ld1_led_pulse                                        | u_reset_synch_20mhz/o_rst_mhz                                               |                2 |              6 |         3.00 |
+|  s_clk_20mhz_BUFG                                                | u_led_palette_pulser/s_ld0_led_pulse                                        | u_reset_synch_20mhz/o_rst_mhz                                               |                2 |              6 |         3.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_palette_pulser/s_ld3_green_pulse                                      |                2 |              6 |         3.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_palette_pulser/s_ld1_green_pulse[5]_i_1_n_0                           |                2 |              6 |         3.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_palette_pulser/s_ld2_blue_pulse                                       |                2 |              6 |         3.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_palette_pulser/s_ld0_green_pulse                                      |                2 |              6 |         3.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_palette_pulser/s_ld0_blue_pulse                                       |                1 |              6 |         6.00 |
+|  u_pmod_hygro_i2c_solo/u_i2c_4x_clock_divider/o_clk_div_BUFG     |                                                                             |                                                                             |                3 |              7 |         2.33 |
+|  s_clk_7_37mhz_BUFG                                              | u_uart_tx_only/s_data_aux                                                   | u_reset_synch_7_37mhz/o_rst_mhz                                             |                3 |              8 |         2.67 |
+|  u_pmod_hygro_i2c_solo/u_i2c_4x_clock_divider/o_clk_div_BUFG     | u_pmod_hygro_i2c_solo/s_i2c_clk_ce2                                         | u_pmod_hygro_i2c_solo/u_i2c_4x_clock_divider/o_rst_div                      |                6 |              9 |         1.50 |
+|  u_pmod_hygro_i2c_solo/u_i2c_4x_clock_divider/o_clk_div_BUFG     | u_pmod_hygro_i2c_solo/s_hold_read_aux                                       | u_pmod_hygro_i2c_solo/u_i2c_4x_clock_divider/o_rst_div                      |                5 |             11 |         2.20 |
+|  s_clk_20mhz_BUFG                                                | u_pmod_cls_custom_driver/u_pmod_generic_spi_solo/s_t                        | u_pmod_cls_custom_driver/u_pmod_generic_spi_solo/s_t[0]_i_1_n_0             |                4 |             13 |         3.25 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_reset_synch_20mhz/s_rst_shift[13]_i_1_n_0                                 |               10 |             14 |         1.40 |
+|  s_clk_7_37mhz_BUFG                                              |                                                                             | u_reset_synch_7_37mhz/s_rst_shift[13]_i_1_n_0                               |                9 |             14 |         1.56 |
+|  s_clk_20mhz_BUFG                                                | u_2_5mhz_ce_divider/o_ce_div                                                | u_reset_synch_20mhz/o_rst_mhz                                               |                9 |             15 |         1.67 |
+|  u_pmod_hygro_i2c_solo/u_i2c_4x_clock_divider/o_clk_div_BUFG     | u_pmod_hygro_i2c_solo/s_temp_aux[15]_i_1_n_0                                | u_pmod_hygro_i2c_solo/u_i2c_4x_clock_divider/o_rst_div                      |                3 |             16 |         5.33 |
+|  u_pmod_hygro_i2c_solo/u_i2c_4x_clock_divider/o_clk_div_BUFG     | u_pmod_hygro_i2c_solo/s_humid_aux[15]_i_1_n_0                               | u_pmod_hygro_i2c_solo/u_i2c_4x_clock_divider/o_rst_div                      |                4 |             16 |         4.00 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/greenloop[0].s_color_green_pwm_duty_cycles_reg[17]_i_1_n_7 | u_reset_synch_20mhz/o_rst_mhz                                               |                7 |             18 |         2.57 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/greenloop[1].s_color_green_pwm_duty_cycles_reg[17]_i_1_n_7 | u_reset_synch_20mhz/o_rst_mhz                                               |                6 |             18 |         3.00 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/redloop[0].s_color_red_pwm_duty_cycles_reg[17]_i_1_n_7     | u_reset_synch_20mhz/o_rst_mhz                                               |                6 |             18 |         3.00 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/blueloop[3].s_color_blue_pwm_duty_cycles_reg[17]_i_1_n_7   | u_reset_synch_20mhz/o_rst_mhz                                               |                5 |             18 |         3.60 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/blueloop[2].s_color_blue_pwm_duty_cycles_reg[17]_i_1_n_7   | u_reset_synch_20mhz/o_rst_mhz                                               |                7 |             18 |         2.57 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/blueloop[1].s_color_blue_pwm_duty_cycles_reg[17]_i_1_n_7   | u_reset_synch_20mhz/o_rst_mhz                                               |                5 |             18 |         3.60 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/blueloop[0].s_color_blue_pwm_duty_cycles_reg[17]_i_1_n_7   | u_reset_synch_20mhz/o_rst_mhz                                               |                7 |             18 |         2.57 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/basicloop[3].s_basic_lumin_pwm_duty_cycles_reg[17]_i_1_n_7 | u_reset_synch_20mhz/o_rst_mhz                                               |                5 |             18 |         3.60 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/basicloop[2].s_basic_lumin_pwm_duty_cycles_reg[17]_i_1_n_7 | u_reset_synch_20mhz/o_rst_mhz                                               |                5 |             18 |         3.60 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/basicloop[1].s_basic_lumin_pwm_duty_cycles_reg[17]_i_1_n_7 | u_reset_synch_20mhz/o_rst_mhz                                               |                7 |             18 |         2.57 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/basicloop[0].s_basic_lumin_pwm_duty_cycles_reg[17]_i_1_n_7 | u_reset_synch_20mhz/o_rst_mhz                                               |                6 |             18 |         3.00 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/greenloop[2].s_color_green_pwm_duty_cycles_reg[17]_i_1_n_7 | u_reset_synch_20mhz/o_rst_mhz                                               |                6 |             18 |         3.00 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/greenloop[3].s_color_green_pwm_duty_cycles_reg[17]_i_1_n_7 | u_reset_synch_20mhz/o_rst_mhz                                               |                6 |             18 |         3.00 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/p_0_in                                                     | u_reset_synch_20mhz/o_rst_mhz                                               |                5 |             18 |         3.60 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/redloop[2].s_color_red_pwm_duty_cycles_reg[17]_i_1_n_7     | u_reset_synch_20mhz/o_rst_mhz                                               |                6 |             18 |         3.00 |
+|  s_clk_20mhz_BUFG                                                | u_led_pwm_driver/redloop[3].s_color_red_pwm_duty_cycles_reg[17]_i_1_n_7     | u_reset_synch_20mhz/o_rst_mhz                                               |                7 |             18 |         2.57 |
+|  s_clk_20mhz_BUFG                                                | u_pmod_cls_custom_driver/u_pmod_cls_stand_spi_solo/s_t                      | u_pmod_cls_custom_driver/u_pmod_cls_stand_spi_solo/s_t[0]_i_1_n_0           |                6 |             21 |         3.50 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_hygro_tester_fsm/o_hygro_op_mode[0]                                       |               12 |             24 |         2.00 |
+|  s_clk_20mhz_BUFG                                                | u_lcd_text_feed/s_i                                                         | u_lcd_text_feed/s_i[0]_i_1_n_0                                              |                6 |             24 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/basicloop[0].s_basic_lumin_pwm_period_count[0]_i_1_n_0     |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                | u_buttons_deb_0123/sel                                                      | u_buttons_deb_0123/s_t[0]_i_1_n_0                                           |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                | u_switches_deb_0123/sel                                                     | u_switches_deb_0123/s_t[0]_i_1_n_0                                          |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                | u_pmod_hygro_i2c_solo/o_valid                                               | u_reset_synch_20mhz/o_rst_mhz                                               |                7 |             32 |         4.57 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/basicloop[3].s_basic_lumin_pwm_period_count[0]_i_1_n_0     |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/greenloop[3].s_color_green_pwm_period_count[0]_i_1_n_0     |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/blueloop[0].s_color_blue_pwm_period_count[0]_i_1_n_0       |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/blueloop[1].s_color_blue_pwm_period_count[0]_i_1_n_0       |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/blueloop[2].s_color_blue_pwm_period_count[0]_i_1_n_0       |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/clear                                                      |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/blueloop[3].s_color_blue_pwm_period_count[0]_i_1_n_0       |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/greenloop[0].s_color_green_pwm_period_count[0]_i_1_n_0     |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/greenloop[1].s_color_green_pwm_period_count[0]_i_1_n_0     |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/greenloop[2].s_color_green_pwm_period_count[0]_i_1_n_0     |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/redloop[0].s_color_red_pwm_period_count[0]_i_1_n_0         |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/redloop[2].s_color_red_pwm_period_count[0]_i_1_n_0         |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/redloop[3].s_color_red_pwm_period_count[0]_i_1_n_0         |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_pmod_cls_custom_driver/u_pmod_generic_spi_solo/v_phase_counter[0]_i_1_n_0 |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/basicloop[2].s_basic_lumin_pwm_period_count[0]_i_1_n_0     |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_led_pwm_driver/basicloop[1].s_basic_lumin_pwm_period_count[0]_i_1_n_0     |                8 |             32 |         4.00 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_hygro_tester_fsm/v_counter1[0]_i_1_n_0                                    |                8 |             32 |         4.00 |
+|  s_clk_7_37mhz_BUFG                                              |                                                                             | u_reset_synch_7_37mhz/o_rst_mhz                                             |               16 |             35 |         2.19 |
+|  s_clk_20mhz_BUFG                                                | u_pmod_cls_custom_driver/u_pmod_cls_stand_spi_solo/s_cls_cmd_tx_aux         | u_reset_synch_20mhz/o_rst_mhz                                               |               30 |             70 |         2.33 |
+|  s_clk_20mhz_BUFG                                                |                                                                             |                                                                             |               41 |             86 |         2.10 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_hdc1080_readings_to_ascii/o_txt_ascii_line1[126]_i_1_n_0                  |               33 |             87 |         2.64 |
+|  s_clk_20mhz_BUFG                                                | u_uart_tx_feed/s_uart_k_aux[5]_i_1_n_0                                      | u_reset_synch_20mhz/o_rst_mhz                                               |               34 |            231 |         6.79 |
+|  s_clk_20mhz_BUFG                                                |                                                                             | u_reset_synch_20mhz/o_rst_mhz                                               |              112 |            253 |         2.26 |
++------------------------------------------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+
+
