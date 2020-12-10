@@ -1,8 +1,8 @@
--- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Sat Sep  5 21:34:56 2020
--- Host        : l4study running 64-bit Ubuntu 18.04.5 LTS
+-- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+-- Date        : Wed Dec  9 18:46:42 2020
+-- Host        : l2study running 64-bit Ubuntu 18.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/timothystotts/Workareas/GitHub/timothystotts/fpga-iic-hygro-tester-1/HYGRO-Tester-Design-AXI/IPI-BDs/system_100/ip/system_100_MuxSSD_0_0/system_100_MuxSSD_0_0_sim_netlist.vhdl
 -- Design      : system_100_MuxSSD_0_0
@@ -2270,13 +2270,19 @@ architecture STRUCTURE of system_100_MuxSSD_0_0_MuxSSD_v1_0 is
   signal \^ssd_mux_o\ : STD_LOGIC;
   signal \NLW_s_clk_div_cnt0_carry__3_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_s_clk_div_cnt0_carry__3_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
+  attribute ADDER_THRESHOLD : integer;
+  attribute ADDER_THRESHOLD of s_clk_div_cnt0_carry : label is 35;
+  attribute ADDER_THRESHOLD of \s_clk_div_cnt0_carry__0\ : label is 35;
+  attribute ADDER_THRESHOLD of \s_clk_div_cnt0_carry__1\ : label is 35;
+  attribute ADDER_THRESHOLD of \s_clk_div_cnt0_carry__2\ : label is 35;
+  attribute ADDER_THRESHOLD of \s_clk_div_cnt0_carry__3\ : label is 35;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \s_clk_div_cnt[0]_i_1\ : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of \s_clk_div_cnt[18]_i_4\ : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of \s_curr_disp[0]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \s_curr_disp[1]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \s_curr_disp[1]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \s_curr_disp[2]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \s_curr_disp[3]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \s_curr_disp[3]_i_1\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \s_curr_disp[4]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \s_curr_disp[5]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \s_curr_disp[6]_i_1\ : label is "soft_lutpair5";
@@ -3240,7 +3246,7 @@ entity system_100_MuxSSD_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_100_MuxSSD_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of system_100_MuxSSD_0_0 : entity is "MuxSSD_v1_0,Vivado 2019.1";
+  attribute x_core_info of system_100_MuxSSD_0_0 : entity is "MuxSSD_v1_0,Vivado 2020.2";
 end system_100_MuxSSD_0_0;
 
 architecture STRUCTURE of system_100_MuxSSD_0_0 is
@@ -3248,11 +3254,11 @@ architecture STRUCTURE of system_100_MuxSSD_0_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of ext_mux_clk : signal is "xilinx.com:signal:clock:1.0 ext_mux_clk CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of ext_mux_clk : signal is "XIL_INTERFACENAME ext_mux_clk, ASSOCIATED_BUSIF seg_gpio:ssd_mux, ASSOCIATED_RESET ext_mux_rst, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
+  attribute x_interface_parameter of ext_mux_clk : signal is "XIL_INTERFACENAME ext_mux_clk, ASSOCIATED_BUSIF seg_gpio:ssd_mux, ASSOCIATED_RESET ext_mux_rst, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0, FREQ_TOLERANCE_HZ 0";
   attribute x_interface_info of ext_mux_rst : signal is "xilinx.com:signal:reset:1.0 ext_mux_rst RST";
   attribute x_interface_parameter of ext_mux_rst : signal is "XIL_INTERFACENAME ext_mux_rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
   attribute x_interface_info of s00_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK";
-  attribute x_interface_parameter of s00_axi_aclk : signal is "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 83333333, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, INSERT_VIP 0";
+  attribute x_interface_parameter of s00_axi_aclk : signal is "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 83333333, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, INSERT_VIP 0, FREQ_TOLERANCE_HZ 0";
   attribute x_interface_info of s00_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S00_AXI_RST RST";
   attribute x_interface_parameter of s00_axi_aresetn : signal is "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_interface_info of s00_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY";
@@ -3269,7 +3275,7 @@ architecture STRUCTURE of system_100_MuxSSD_0_0 is
   attribute x_interface_info of s00_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR";
   attribute x_interface_info of s00_axi_arprot : signal is "xilinx.com:interface:aximm:1.0 S00_AXI ARPROT";
   attribute x_interface_info of s00_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR";
-  attribute x_interface_parameter of s00_axi_awaddr : signal is "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 83333333, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s00_axi_awaddr : signal is "XIL_INTERFACENAME S00_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 83333333, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s00_axi_awprot : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT";
   attribute x_interface_info of s00_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BRESP";
   attribute x_interface_info of s00_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RDATA";

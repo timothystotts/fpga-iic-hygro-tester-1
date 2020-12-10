@@ -1,8 +1,8 @@
-// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-// Date        : Sat Sep  5 21:30:11 2020
-// Host        : l4study running 64-bit Ubuntu 18.04.5 LTS
+// Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+// Date        : Wed Dec  9 18:41:20 2020
+// Host        : l2study running 64-bit Ubuntu 18.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/timothystotts/Workareas/GitHub/timothystotts/fpga-iic-hygro-tester-1/HYGRO-Tester-Design-AXI/IPI-BDs/system_100/ip/system_100_ilmb_bram_if_cntlr_0/system_100_ilmb_bram_if_cntlr_0_sim_netlist.v
 // Design      : system_100_ilmb_bram_if_cntlr_0
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "system_100_ilmb_bram_if_cntlr_0,lmb_bram_if_cntlr,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "lmb_bram_if_cntlr,Vivado 2019.1" *) 
+(* CHECK_LICENSE_TYPE = "system_100_ilmb_bram_if_cntlr_0,lmb_bram_if_cntlr,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "lmb_bram_if_cntlr,Vivado 2020.2" *) 
 (* NotValidForBitStream *)
 module system_100_ilmb_bram_if_cntlr_0
    (LMB_Clk,
@@ -35,9 +35,9 @@ module system_100_ilmb_bram_if_cntlr_0
     BRAM_WEN_A,
     BRAM_Dout_A,
     BRAM_Din_A);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.LMB_Clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.LMB_Clk, ASSOCIATED_BUSIF SLMB:SLMB1:SLMB2:SLMB3, ASSOCIATED_RESET LMB_Rst, FREQ_HZ 83333333, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, INSERT_VIP 0" *) input LMB_Clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.LMB_Clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.LMB_Clk, ASSOCIATED_BUSIF SLMB:SLMB1:SLMB2:SLMB3, ASSOCIATED_RESET LMB_Rst, FREQ_HZ 83333333, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, INSERT_VIP 0" *) input LMB_Clk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.LMB_Rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.LMB_Rst, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0" *) input LMB_Rst;
-  (* x_interface_info = "xilinx.com:interface:lmb:1.0 SLMB ABUS" *) (* x_interface_parameter = "XIL_INTERFACENAME SLMB, ADDR_WIDTH 32, DATA_WIDTH 32, READ_WRITE_MODE READ_WRITE" *) input [0:31]LMB_ABus;
+  (* x_interface_info = "xilinx.com:interface:lmb:1.0 SLMB ABUS" *) (* x_interface_parameter = "XIL_INTERFACENAME SLMB, ADDR_WIDTH 32, DATA_WIDTH 32, READ_WRITE_MODE READ_WRITE, PROTOCOL STANDARD" *) input [0:31]LMB_ABus;
   (* x_interface_info = "xilinx.com:interface:lmb:1.0 SLMB WRITEDBUS" *) input [0:31]LMB_WriteDBus;
   (* x_interface_info = "xilinx.com:interface:lmb:1.0 SLMB ADDRSTROBE" *) input LMB_AddrStrobe;
   (* x_interface_info = "xilinx.com:interface:lmb:1.0 SLMB READSTROBE" *) input LMB_ReadStrobe;
@@ -56,26 +56,23 @@ module system_100_ilmb_bram_if_cntlr_0
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORT DIN" *) output [0:31]BRAM_Dout_A;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORT DOUT" *) input [0:31]BRAM_Din_A;
 
+  wire \<const0> ;
   wire [0:31]BRAM_Addr_A;
   wire BRAM_Clk_A;
   wire [0:31]BRAM_Din_A;
   wire [0:31]BRAM_Dout_A;
   wire BRAM_EN_A;
-  wire BRAM_Rst_A;
   wire [0:3]BRAM_WEN_A;
   wire [0:31]LMB_ABus;
   wire LMB_AddrStrobe;
   wire [0:3]LMB_BE;
   wire LMB_Clk;
-  wire LMB_ReadStrobe;
   wire LMB_Rst;
   wire [0:31]LMB_WriteDBus;
   wire LMB_WriteStrobe;
-  wire Sl_CE;
   wire [0:31]Sl_DBus;
   wire Sl_Ready;
-  wire Sl_UE;
-  wire Sl_Wait;
+  wire NLW_U0_BRAM_Rst_A_UNCONNECTED;
   wire NLW_U0_CE_UNCONNECTED;
   wire NLW_U0_Interrupt_UNCONNECTED;
   wire NLW_U0_S_AXI_CTRL_ARREADY_UNCONNECTED;
@@ -95,6 +92,9 @@ module system_100_ilmb_bram_if_cntlr_0
   wire NLW_U0_Sl3_Ready_UNCONNECTED;
   wire NLW_U0_Sl3_UE_UNCONNECTED;
   wire NLW_U0_Sl3_Wait_UNCONNECTED;
+  wire NLW_U0_Sl_CE_UNCONNECTED;
+  wire NLW_U0_Sl_UE_UNCONNECTED;
+  wire NLW_U0_Sl_Wait_UNCONNECTED;
   wire NLW_U0_UE_UNCONNECTED;
   wire [1:0]NLW_U0_S_AXI_CTRL_BRESP_UNCONNECTED;
   wire [31:0]NLW_U0_S_AXI_CTRL_RDATA_UNCONNECTED;
@@ -103,6 +103,12 @@ module system_100_ilmb_bram_if_cntlr_0
   wire [0:31]NLW_U0_Sl2_DBus_UNCONNECTED;
   wire [0:31]NLW_U0_Sl3_DBus_UNCONNECTED;
 
+  assign BRAM_Rst_A = \<const0> ;
+  assign Sl_CE = \<const0> ;
+  assign Sl_UE = \<const0> ;
+  assign Sl_Wait = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
   (* C_BASEADDR = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) 
   (* C_BRAM_AWIDTH = "32" *) 
   (* C_CE_COUNTER_WIDTH = "0" *) 
@@ -117,6 +123,7 @@ module system_100_ilmb_bram_if_cntlr_0
   (* C_INTERCONNECT = "0" *) 
   (* C_LMB_AWIDTH = "32" *) 
   (* C_LMB_DWIDTH = "32" *) 
+  (* C_LMB_PROTOCOL = "0" *) 
   (* C_MASK = "64'b0000000000000000000000000000000010000000000000000000000000000000" *) 
   (* C_MASK1 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
   (* C_MASK2 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
@@ -134,7 +141,7 @@ module system_100_ilmb_bram_if_cntlr_0
         .BRAM_Din_A(BRAM_Din_A),
         .BRAM_Dout_A(BRAM_Dout_A),
         .BRAM_EN_A(BRAM_EN_A),
-        .BRAM_Rst_A(BRAM_Rst_A),
+        .BRAM_Rst_A(NLW_U0_BRAM_Rst_A_UNCONNECTED),
         .BRAM_WEN_A(BRAM_WEN_A),
         .CE(NLW_U0_CE_UNCONNECTED),
         .Interrupt(NLW_U0_Interrupt_UNCONNECTED),
@@ -160,7 +167,7 @@ module system_100_ilmb_bram_if_cntlr_0
         .LMB_AddrStrobe(LMB_AddrStrobe),
         .LMB_BE(LMB_BE),
         .LMB_Clk(LMB_Clk),
-        .LMB_ReadStrobe(LMB_ReadStrobe),
+        .LMB_ReadStrobe(1'b0),
         .LMB_Rst(LMB_Rst),
         .LMB_WriteDBus(LMB_WriteDBus),
         .LMB_WriteStrobe(LMB_WriteStrobe),
@@ -198,11 +205,11 @@ module system_100_ilmb_bram_if_cntlr_0
         .Sl3_Ready(NLW_U0_Sl3_Ready_UNCONNECTED),
         .Sl3_UE(NLW_U0_Sl3_UE_UNCONNECTED),
         .Sl3_Wait(NLW_U0_Sl3_Wait_UNCONNECTED),
-        .Sl_CE(Sl_CE),
+        .Sl_CE(NLW_U0_Sl_CE_UNCONNECTED),
         .Sl_DBus(Sl_DBus),
         .Sl_Ready(Sl_Ready),
-        .Sl_UE(Sl_UE),
-        .Sl_Wait(Sl_Wait),
+        .Sl_UE(NLW_U0_Sl_UE_UNCONNECTED),
+        .Sl_Wait(NLW_U0_Sl_Wait_UNCONNECTED),
         .UE(NLW_U0_UE_UNCONNECTED));
 endmodule
 
@@ -210,11 +217,11 @@ endmodule
 (* C_CE_FAILING_REGISTERS = "0" *) (* C_ECC = "0" *) (* C_ECC_ONOFF_REGISTER = "0" *) 
 (* C_ECC_ONOFF_RESET_VALUE = "1" *) (* C_ECC_STATUS_REGISTERS = "0" *) (* C_FAMILY = "artix7" *) 
 (* C_FAULT_INJECT = "0" *) (* C_HIGHADDR = "64'b0000000000000000000000000000000000000000000000000111111111111111" *) (* C_INTERCONNECT = "0" *) 
-(* C_LMB_AWIDTH = "32" *) (* C_LMB_DWIDTH = "32" *) (* C_MASK = "64'b0000000000000000000000000000000010000000000000000000000000000000" *) 
-(* C_MASK1 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK2 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK3 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
-(* C_NUM_LMB = "1" *) (* C_S_AXI_CTRL_ADDR_WIDTH = "32" *) (* C_S_AXI_CTRL_BASEADDR = "32'b11111111111111111111111111111111" *) 
-(* C_S_AXI_CTRL_DATA_WIDTH = "32" *) (* C_S_AXI_CTRL_HIGHADDR = "32'b00000000000000000000000000000000" *) (* C_UE_FAILING_REGISTERS = "0" *) 
-(* C_WRITE_ACCESS = "2" *) (* ORIG_REF_NAME = "lmb_bram_if_cntlr" *) 
+(* C_LMB_AWIDTH = "32" *) (* C_LMB_DWIDTH = "32" *) (* C_LMB_PROTOCOL = "0" *) 
+(* C_MASK = "64'b0000000000000000000000000000000010000000000000000000000000000000" *) (* C_MASK1 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK2 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
+(* C_MASK3 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_NUM_LMB = "1" *) (* C_S_AXI_CTRL_ADDR_WIDTH = "32" *) 
+(* C_S_AXI_CTRL_BASEADDR = "32'b11111111111111111111111111111111" *) (* C_S_AXI_CTRL_DATA_WIDTH = "32" *) (* C_S_AXI_CTRL_HIGHADDR = "32'b00000000000000000000000000000000" *) 
+(* C_UE_FAILING_REGISTERS = "0" *) (* C_WRITE_ACCESS = "2" *) (* ORIG_REF_NAME = "lmb_bram_if_cntlr" *) 
 module system_100_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
    (LMB_Clk,
     LMB_Rst,
@@ -546,11 +553,11 @@ module system_100_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   assign UE = \<const0> ;
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
-    .INIT(8'h20)) 
+    .INIT(8'h40)) 
     \BRAM_WEN_A[0]_INST_0 
-       (.I0(LMB_BE[0]),
-        .I1(LMB_ABus[0]),
-        .I2(LMB_WriteStrobe),
+       (.I0(LMB_ABus[0]),
+        .I1(LMB_WriteStrobe),
+        .I2(LMB_BE[0]),
         .O(BRAM_WEN_A[0]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
@@ -607,8 +614,8 @@ module system_100_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   LUT2 #(
     .INIT(4'h8)) 
     Sl_Ready_INST_0
-       (.I0(Sl_Rdy),
-        .I1(lmb_as),
+       (.I0(lmb_as),
+        .I1(Sl_Rdy),
         .O(Sl_Ready));
 endmodule
 `ifndef GLBL
@@ -619,12 +626,15 @@ module glbl ();
 
     parameter ROC_WIDTH = 100000;
     parameter TOC_WIDTH = 0;
+    parameter GRES_WIDTH = 10000;
+    parameter GRES_START = 10000;
 
 //--------   STARTUP Globals --------------
     wire GSR;
     wire GTS;
     wire GWE;
     wire PRLD;
+    wire GRESTORE;
     tri1 p_up_tmp;
     tri (weak1, strong0) PLL_LOCKG = p_up_tmp;
 
@@ -637,6 +647,7 @@ module glbl ();
     reg GSR_int;
     reg GTS_int;
     reg PRLD_int;
+    reg GRESTORE_int;
 
 //--------   JTAG Globals --------------
     wire JTAG_TDO_GLBL;
@@ -664,6 +675,7 @@ module glbl ();
     assign (strong1, weak0) GSR = GSR_int;
     assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
+    assign (strong1, weak0) GRESTORE = GRESTORE_int;
 
     initial begin
 	GSR_int = 1'b1;
@@ -677,6 +689,14 @@ module glbl ();
 	GTS_int = 1'b1;
 	#(TOC_WIDTH)
 	GTS_int = 1'b0;
+    end
+
+    initial begin 
+	GRESTORE_int = 1'b0;
+	#(GRES_START);
+	GRESTORE_int = 1'b1;
+	#(GRES_WIDTH);
+	GRESTORE_int = 1'b0;
     end
 
 endmodule

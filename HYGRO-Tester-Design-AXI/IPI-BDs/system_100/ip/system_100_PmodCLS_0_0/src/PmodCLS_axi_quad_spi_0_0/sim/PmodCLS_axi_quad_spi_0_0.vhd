@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:axi_quad_spi:3.2
--- IP Revision: 18
+-- IP Revision: 21
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY axi_quad_spi_v3_2_18;
-USE axi_quad_spi_v3_2_18.axi_quad_spi;
+LIBRARY axi_quad_spi_v3_2_21;
+USE axi_quad_spi_v3_2_21.axi_quad_spi;
 
 ENTITY PmodCLS_axi_quad_spi_0_0 IS
   PORT (
@@ -107,6 +107,7 @@ ARCHITECTURE PmodCLS_axi_quad_spi_0_0_arch OF PmodCLS_axi_quad_spi_0_0 IS
       C_SPI_MEM_ADDR_BITS : INTEGER;
       C_TYPE_OF_AXI4_INTERFACE : INTEGER;
       C_XIP_MODE : INTEGER;
+      C_XIP_PERF_MODE : INTEGER;
       C_UC_FAMILY : INTEGER;
       C_FIFO_DEPTH : INTEGER;
       C_SCK_RATIO : INTEGER;
@@ -273,9 +274,9 @@ ARCHITECTURE PmodCLS_axi_quad_spi_0_0_arch OF PmodCLS_axi_quad_spi_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 AXI_LITE AWADDR";
   ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_aresetn: SIGNAL IS "XIL_INTERFACENAME lite_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 lite_reset RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_aclk: SIGNAL IS "XIL_INTERFACENAME lite_clk, ASSOCIATED_BUSIF AXI_LITE, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_aclk: SIGNAL IS "XIL_INTERFACENAME lite_clk, ASSOCIATED_BUSIF AXI_LITE, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 lite_clk CLK";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF ext_spi_clk: SIGNAL IS "XIL_INTERFACENAME spi_clk, ASSOCIATED_BUSIF SPI_0, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF ext_spi_clk: SIGNAL IS "XIL_INTERFACENAME spi_clk, ASSOCIATED_BUSIF SPI_0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF ext_spi_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 spi_clk CLK";
 BEGIN
   U0 : axi_quad_spi
@@ -288,6 +289,7 @@ BEGIN
       C_SPI_MEM_ADDR_BITS => 24,
       C_TYPE_OF_AXI4_INTERFACE => 0,
       C_XIP_MODE => 0,
+      C_XIP_PERF_MODE => 1,
       C_UC_FAMILY => 0,
       C_FIFO_DEPTH => 16,
       C_SCK_RATIO => 80,

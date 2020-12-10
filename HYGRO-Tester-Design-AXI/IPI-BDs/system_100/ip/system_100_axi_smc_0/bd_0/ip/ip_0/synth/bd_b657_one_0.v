@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:ip:xlconstant:1.1
-// IP Revision: 6
+// IP Revision: 7
 
-(* X_CORE_INFO = "xlconstant_v1_1_6_xlconstant,Vivado 2019.1" *)
-(* CHECK_LICENSE_TYPE = "bd_b657_one_0,xlconstant_v1_1_6_xlconstant,{}" *)
-(* CORE_GENERATION_INFO = "bd_b657_one_0,xlconstant_v1_1_6_xlconstant,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconstant,x_ipVersion=1.1,x_ipCoreRevision=6,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,CONST_WIDTH=1,CONST_VAL=0x1}" *)
+(* X_CORE_INFO = "xlconstant_v1_1_7_xlconstant,Vivado 2020.2" *)
+(* CHECK_LICENSE_TYPE = "bd_b657_one_0,xlconstant_v1_1_7_xlconstant,{}" *)
+(* CORE_GENERATION_INFO = "bd_b657_one_0,xlconstant_v1_1_7_xlconstant,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconstant,x_ipVersion=1.1,x_ipCoreRevision=7,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,CONST_WIDTH=1,CONST_VAL=0x1}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_b657_one_0 (
   dout
@@ -60,9 +60,9 @@ module bd_b657_one_0 (
 
 output wire [0 : 0] dout;
 
-  xlconstant_v1_1_6_xlconstant #(
+  xlconstant_v1_1_7_xlconstant #(
     .CONST_WIDTH(1),
-    .CONST_VAL('H1)
+    .CONST_VAL(1'H1)
   ) inst (
     .dout(dout)
   );

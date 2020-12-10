@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:mdm:3.2
--- IP Revision: 16
+-- IP Revision: 19
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY mdm_v3_2_16;
-USE mdm_v3_2_16.MDM;
+LIBRARY mdm_v3_2_19;
+USE mdm_v3_2_19.MDM;
 
 ENTITY system_100_mdm_1_0 IS
   PORT (
@@ -77,6 +77,7 @@ ARCHITECTURE system_100_mdm_1_0_arch OF system_100_mdm_1_0 IS
   COMPONENT MDM IS
     GENERIC (
       C_FAMILY : STRING;
+      C_REVISION : STRING;
       C_JTAG_CHAIN : INTEGER;
       C_USE_BSCAN : INTEGER;
       C_BSCANID : INTEGER;
@@ -105,6 +106,7 @@ ARCHITECTURE system_100_mdm_1_0_arch OF system_100_mdm_1_0 IS
       C_M_AXI_THREAD_ID_WIDTH : INTEGER;
       C_ADDR_SIZE : INTEGER;
       C_DATA_SIZE : INTEGER;
+      C_LMB_PROTOCOL : INTEGER;
       C_M_AXIS_DATA_WIDTH : INTEGER;
       C_M_AXIS_ID_WIDTH : INTEGER
     );
@@ -1618,6 +1620,7 @@ ARCHITECTURE system_100_mdm_1_0_arch OF system_100_mdm_1_0 IS
       bscan_ext_drck : IN STD_LOGIC;
       bscan_ext_tdo : OUT STD_LOGIC;
       bscan_ext_tck : IN STD_LOGIC;
+      bscan_ext_tms : IN STD_LOGIC;
       bscan_ext_bscanid_en : IN STD_LOGIC;
       Ext_JTAG_DRCK : OUT STD_LOGIC;
       Ext_JTAG_RESET : OUT STD_LOGIC;
@@ -1646,6 +1649,7 @@ BEGIN
   U0 : MDM
     GENERIC MAP (
       C_FAMILY => "artix7",
+      C_REVISION => "",
       C_JTAG_CHAIN => 2,
       C_USE_BSCAN => 0,
       C_BSCANID => 76547328,
@@ -1674,6 +1678,7 @@ BEGIN
       C_M_AXI_THREAD_ID_WIDTH => 1,
       C_ADDR_SIZE => 32,
       C_DATA_SIZE => 32,
+      C_LMB_PROTOCOL => 0,
       C_M_AXIS_DATA_WIDTH => 32,
       C_M_AXIS_ID_WIDTH => 7
     )
@@ -2311,6 +2316,7 @@ BEGIN
       bscan_ext_sel => '0',
       bscan_ext_drck => '0',
       bscan_ext_tck => '0',
+      bscan_ext_tms => '0',
       bscan_ext_bscanid_en => '0',
       Ext_JTAG_TDO => '0'
     );

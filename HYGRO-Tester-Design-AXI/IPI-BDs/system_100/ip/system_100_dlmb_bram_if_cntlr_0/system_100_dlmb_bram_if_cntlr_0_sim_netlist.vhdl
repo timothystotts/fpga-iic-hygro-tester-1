@@ -1,8 +1,8 @@
--- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Sat Sep  5 22:29:15 2020
--- Host        : l4study running 64-bit Ubuntu 18.04.5 LTS
+-- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+-- Date        : Wed Dec  9 18:41:08 2020
+-- Host        : l2study running 64-bit Ubuntu 18.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/timothystotts/Workareas/GitHub/timothystotts/fpga-iic-hygro-tester-1/HYGRO-Tester-Design-AXI/IPI-BDs/system_100/ip/system_100_dlmb_bram_if_cntlr_0/system_100_dlmb_bram_if_cntlr_0_sim_netlist.vhdl
 -- Design      : system_100_dlmb_bram_if_cntlr_0
@@ -120,6 +120,8 @@ entity system_100_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr is
   attribute C_LMB_AWIDTH of system_100_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 32;
   attribute C_LMB_DWIDTH : integer;
   attribute C_LMB_DWIDTH of system_100_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 32;
+  attribute C_LMB_PROTOCOL : integer;
+  attribute C_LMB_PROTOCOL of system_100_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 0;
   attribute C_MASK : string;
   attribute C_MASK of system_100_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000011000000000000000000000000000000";
   attribute C_MASK1 : string;
@@ -336,42 +338,42 @@ begin
       INIT => X"0200"
     )
         port map (
-      I0 => LMB_BE(0),
+      I0 => LMB_WriteStrobe,
       I1 => \^lmb_abus\(1),
       I2 => \^lmb_abus\(0),
-      I3 => LMB_WriteStrobe,
+      I3 => LMB_BE(0),
       O => BRAM_WEN_A(0)
     );
 \BRAM_WEN_A[1]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"1000"
+      INIT => X"0200"
     )
         port map (
-      I0 => \^lmb_abus\(1),
-      I1 => \^lmb_abus\(0),
-      I2 => LMB_WriteStrobe,
+      I0 => LMB_WriteStrobe,
+      I1 => \^lmb_abus\(1),
+      I2 => \^lmb_abus\(0),
       I3 => LMB_BE(1),
       O => BRAM_WEN_A(1)
     );
 \BRAM_WEN_A[2]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"1000"
+      INIT => X"0200"
     )
         port map (
-      I0 => \^lmb_abus\(1),
-      I1 => \^lmb_abus\(0),
-      I2 => LMB_WriteStrobe,
+      I0 => LMB_WriteStrobe,
+      I1 => \^lmb_abus\(1),
+      I2 => \^lmb_abus\(0),
       I3 => LMB_BE(2),
       O => BRAM_WEN_A(2)
     );
 \BRAM_WEN_A[3]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"1000"
+      INIT => X"0200"
     )
         port map (
-      I0 => \^lmb_abus\(1),
-      I1 => \^lmb_abus\(0),
-      I2 => LMB_WriteStrobe,
+      I0 => LMB_WriteStrobe,
+      I1 => \^lmb_abus\(1),
+      I2 => \^lmb_abus\(0),
       I3 => LMB_BE(3),
       O => BRAM_WEN_A(3)
     );
@@ -419,8 +421,8 @@ Sl_Ready_INST_0: unisim.vcomponents.LUT2
       INIT => X"8"
     )
         port map (
-      I0 => Sl_Rdy,
-      I1 => lmb_as,
+      I0 => lmb_as,
+      I1 => Sl_Rdy,
       O => Sl_Ready
     );
 end STRUCTURE;
@@ -458,10 +460,12 @@ entity system_100_dlmb_bram_if_cntlr_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_100_dlmb_bram_if_cntlr_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of system_100_dlmb_bram_if_cntlr_0 : entity is "lmb_bram_if_cntlr,Vivado 2019.1";
+  attribute x_core_info of system_100_dlmb_bram_if_cntlr_0 : entity is "lmb_bram_if_cntlr,Vivado 2020.2";
 end system_100_dlmb_bram_if_cntlr_0;
 
 architecture STRUCTURE of system_100_dlmb_bram_if_cntlr_0 is
+  signal \<const0>\ : STD_LOGIC;
+  signal NLW_U0_BRAM_Rst_A_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_CE_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_Interrupt_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_S_AXI_CTRL_ARREADY_UNCONNECTED : STD_LOGIC;
@@ -481,6 +485,9 @@ architecture STRUCTURE of system_100_dlmb_bram_if_cntlr_0 is
   signal NLW_U0_Sl3_Ready_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_Sl3_UE_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_Sl3_Wait_UNCONNECTED : STD_LOGIC;
+  signal NLW_U0_Sl_CE_UNCONNECTED : STD_LOGIC;
+  signal NLW_U0_Sl_UE_UNCONNECTED : STD_LOGIC;
+  signal NLW_U0_Sl_Wait_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_UE_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_S_AXI_CTRL_BRESP_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_U0_S_AXI_CTRL_RDATA_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -516,6 +523,8 @@ architecture STRUCTURE of system_100_dlmb_bram_if_cntlr_0 is
   attribute C_LMB_AWIDTH of U0 : label is 32;
   attribute C_LMB_DWIDTH : integer;
   attribute C_LMB_DWIDTH of U0 : label is 32;
+  attribute C_LMB_PROTOCOL : integer;
+  attribute C_LMB_PROTOCOL of U0 : label is 0;
   attribute C_MASK : string;
   attribute C_MASK of U0 : label is "64'b0000000000000000000000000000000011000000000000000000000000000000";
   attribute C_MASK1 : string;
@@ -546,7 +555,7 @@ architecture STRUCTURE of system_100_dlmb_bram_if_cntlr_0 is
   attribute x_interface_parameter of BRAM_Rst_A : signal is "XIL_INTERFACENAME BRAM_PORT, MEM_SIZE 32768, MASTER_TYPE BRAM_CTRL, MEM_WIDTH 32, MEM_ECC NONE, READ_LATENCY 1";
   attribute x_interface_info of LMB_AddrStrobe : signal is "xilinx.com:interface:lmb:1.0 SLMB ADDRSTROBE";
   attribute x_interface_info of LMB_Clk : signal is "xilinx.com:signal:clock:1.0 CLK.LMB_Clk CLK";
-  attribute x_interface_parameter of LMB_Clk : signal is "XIL_INTERFACENAME CLK.LMB_Clk, ASSOCIATED_BUSIF SLMB:SLMB1:SLMB2:SLMB3, ASSOCIATED_RESET LMB_Rst, FREQ_HZ 83333333, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, INSERT_VIP 0";
+  attribute x_interface_parameter of LMB_Clk : signal is "XIL_INTERFACENAME CLK.LMB_Clk, ASSOCIATED_BUSIF SLMB:SLMB1:SLMB2:SLMB3, ASSOCIATED_RESET LMB_Rst, FREQ_HZ 83333333, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN system_100_mig_7series_0_0_ui_clk, INSERT_VIP 0";
   attribute x_interface_info of LMB_ReadStrobe : signal is "xilinx.com:interface:lmb:1.0 SLMB READSTROBE";
   attribute x_interface_info of LMB_Rst : signal is "xilinx.com:signal:reset:1.0 RST.LMB_Rst RST";
   attribute x_interface_parameter of LMB_Rst : signal is "XIL_INTERFACENAME RST.LMB_Rst, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0";
@@ -560,11 +569,19 @@ architecture STRUCTURE of system_100_dlmb_bram_if_cntlr_0 is
   attribute x_interface_info of BRAM_Dout_A : signal is "xilinx.com:interface:bram:1.0 BRAM_PORT DIN";
   attribute x_interface_info of BRAM_WEN_A : signal is "xilinx.com:interface:bram:1.0 BRAM_PORT WE";
   attribute x_interface_info of LMB_ABus : signal is "xilinx.com:interface:lmb:1.0 SLMB ABUS";
-  attribute x_interface_parameter of LMB_ABus : signal is "XIL_INTERFACENAME SLMB, ADDR_WIDTH 32, DATA_WIDTH 32, READ_WRITE_MODE READ_WRITE";
+  attribute x_interface_parameter of LMB_ABus : signal is "XIL_INTERFACENAME SLMB, ADDR_WIDTH 32, DATA_WIDTH 32, READ_WRITE_MODE READ_WRITE, PROTOCOL STANDARD";
   attribute x_interface_info of LMB_BE : signal is "xilinx.com:interface:lmb:1.0 SLMB BE";
   attribute x_interface_info of LMB_WriteDBus : signal is "xilinx.com:interface:lmb:1.0 SLMB WRITEDBUS";
   attribute x_interface_info of Sl_DBus : signal is "xilinx.com:interface:lmb:1.0 SLMB READDBUS";
 begin
+  BRAM_Rst_A <= \<const0>\;
+  Sl_CE <= \<const0>\;
+  Sl_UE <= \<const0>\;
+  Sl_Wait <= \<const0>\;
+GND: unisim.vcomponents.GND
+     port map (
+      G => \<const0>\
+    );
 U0: entity work.system_100_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr
      port map (
       BRAM_Addr_A(0 to 31) => BRAM_Addr_A(0 to 31),
@@ -572,7 +589,7 @@ U0: entity work.system_100_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr
       BRAM_Din_A(0 to 31) => BRAM_Din_A(0 to 31),
       BRAM_Dout_A(0 to 31) => BRAM_Dout_A(0 to 31),
       BRAM_EN_A => BRAM_EN_A,
-      BRAM_Rst_A => BRAM_Rst_A,
+      BRAM_Rst_A => NLW_U0_BRAM_Rst_A_UNCONNECTED,
       BRAM_WEN_A(0 to 3) => BRAM_WEN_A(0 to 3),
       CE => NLW_U0_CE_UNCONNECTED,
       Interrupt => NLW_U0_Interrupt_UNCONNECTED,
@@ -598,7 +615,7 @@ U0: entity work.system_100_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr
       LMB_AddrStrobe => LMB_AddrStrobe,
       LMB_BE(0 to 3) => LMB_BE(0 to 3),
       LMB_Clk => LMB_Clk,
-      LMB_ReadStrobe => LMB_ReadStrobe,
+      LMB_ReadStrobe => '0',
       LMB_Rst => LMB_Rst,
       LMB_WriteDBus(0 to 31) => LMB_WriteDBus(0 to 31),
       LMB_WriteStrobe => LMB_WriteStrobe,
@@ -636,11 +653,11 @@ U0: entity work.system_100_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr
       Sl3_Ready => NLW_U0_Sl3_Ready_UNCONNECTED,
       Sl3_UE => NLW_U0_Sl3_UE_UNCONNECTED,
       Sl3_Wait => NLW_U0_Sl3_Wait_UNCONNECTED,
-      Sl_CE => Sl_CE,
+      Sl_CE => NLW_U0_Sl_CE_UNCONNECTED,
       Sl_DBus(0 to 31) => Sl_DBus(0 to 31),
       Sl_Ready => Sl_Ready,
-      Sl_UE => Sl_UE,
-      Sl_Wait => Sl_Wait,
+      Sl_UE => NLW_U0_Sl_UE_UNCONNECTED,
+      Sl_Wait => NLW_U0_Sl_Wait_UNCONNECTED,
       UE => NLW_U0_UE_UNCONNECTED
     );
 end STRUCTURE;

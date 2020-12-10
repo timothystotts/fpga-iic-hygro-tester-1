@@ -50,7 +50,7 @@
 // IP VLNV: digilentinc.com:ip:pmod_bridge:1.1
 // IP Revision: 6
 
-(* X_CORE_INFO = "pmod_concat,Vivado 2019.1" *)
+(* X_CORE_INFO = "pmod_concat,Vivado 2020.2" *)
 (* CHECK_LICENSE_TYPE = "PmodCLS_pmod_bridge_0_0,pmod_concat,{}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module PmodCLS_pmod_bridge_0_0 (
